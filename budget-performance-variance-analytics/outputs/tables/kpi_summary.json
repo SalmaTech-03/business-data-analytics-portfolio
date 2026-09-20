@@ -1,0 +1,18 @@
+{
+  "record_count": 6780,
+  "department_count": 8,
+  "total_budget_allocated": 1019783032.04,
+  "total_budget_utilized": 978883735.3599999,
+  "overall_utilization_rate": 0.9598941192439885,
+  "computed_budget_gap": 40899296.68000007,
+  "supplied_budget_variance_do_not_use_for_analysis": -360163.99,
+  "total_revenue_forecast": 1250614857.8200002,
+  "total_actual_revenue": 1202028524.8600001,
+  "revenue_realization_rate": 0.9611500433917018,
+  "average_allocation_efficiency": 84.04243362831858,
+  "budget_status_distribution": {
+    "Efficient": 0.33997050147492625,
+    "Inefficient": 0.33436578171091447,
+    "Moderate": 0.3256637168141593
+  }
+}

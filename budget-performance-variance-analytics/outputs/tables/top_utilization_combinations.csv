@@ -1,0 +1,11 @@
+department,expense_category,utilization_rate
+Finance,Operations,1.3002235024759239
+IT,Salaries,1.2612359838668552
+Finance,Training,1.2587687752880894
+Sales,Maintenance,1.2550724550001051
+Finance,Salaries,1.2532304844635695
+Logistics,Maintenance,1.252343530834987
+R&D,Training,1.2489341232289104
+R&D,Infrastructure,1.247981062814591
+R&D,Salaries,1.2430764857676264
+HR,Infrastructure,1.2425345037989923
