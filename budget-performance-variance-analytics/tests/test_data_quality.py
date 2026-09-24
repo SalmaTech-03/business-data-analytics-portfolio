@@ -1,4 +1,4 @@
-git status"""
+"""
 Meaningful data-quality tests run against the actual raw dataset.
 These assert properties that were verified during data profiling -
 if the underlying CSV changes and these break, that's a real signal
