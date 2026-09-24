@@ -1,0 +1,12 @@
+# Versions below are those the pipeline and tests were run with (Python 3.12).
+pandas==3.0.2
+numpy>=1.26
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
+openpyxl==3.1.5
+# Optional (not installed / not run in the build environment):
+# streamlit>=1.30      -> app/streamlit_app.py
+# psycopg2-binary      -> scripts/load_postgres.py
+# pytest               -> pytest tests/   (tests/run_tests.py works without it)
+# statsmodels          -> would enable an ARIMA extension (not included)

@@ -1,0 +1,274 @@
+{
+  "seed": 42,
+  "company": "PetroNexa Energy (FICTIONAL)",
+  "notice": "All operational, production, financial, maintenance, inventory, sensor and HSE data in this project are synthetic/simulated and created for portfolio demonstration purposes. They do not represent actual operations of a real company.",
+  "tables": {
+    "dim_date": {
+      "rows": 1096,
+      "columns": [
+        "date_key",
+        "date",
+        "year",
+        "quarter",
+        "month",
+        "month_name",
+        "week",
+        "day",
+        "day_of_week",
+        "is_weekend"
+      ],
+      "content_hash": "dff25a56548f541f"
+    },
+    "dim_field": {
+      "rows": 4,
+      "columns": [
+        "field_id",
+        "field_name",
+        "region",
+        "basin",
+        "field_type",
+        "operator",
+        "commission_date",
+        "status"
+      ],
+      "content_hash": "8f86899acd53c66f"
+    },
+    "dim_well": {
+      "rows": 60,
+      "columns": [
+        "well_id",
+        "well_name",
+        "field_id",
+        "well_type",
+        "reservoir",
+        "depth_m",
+        "latitude",
+        "longitude",
+        "commission_date",
+        "status",
+        "primary_equipment_id"
+      ],
+      "content_hash": "c1fb5ffb8c3a1a60"
+    },
+    "dim_equipment": {
+      "rows": 48,
+      "columns": [
+        "equipment_id",
+        "equipment_name",
+        "equipment_type",
+        "field_id",
+        "manufacturer",
+        "installation_date",
+        "criticality",
+        "status"
+      ],
+      "content_hash": "f5c93baa948a6259"
+    },
+    "dim_supplier": {
+      "rows": 8,
+      "columns": [
+        "supplier_id",
+        "supplier_name",
+        "supplier_category",
+        "region",
+        "lead_time_days",
+        "supplier_rating"
+      ],
+      "content_hash": "f176860c2a5f531d"
+    },
+    "dim_material": {
+      "rows": 40,
+      "columns": [
+        "material_id",
+        "material_name",
+        "material_category",
+        "unit",
+        "unit_cost",
+        "reorder_level",
+        "lead_time_days",
+        "primary_supplier_id"
+      ],
+      "content_hash": "ede6f462dbc7f116"
+    },
+    "dim_warehouse": {
+      "rows": 4,
+      "columns": [
+        "warehouse_id",
+        "warehouse_name",
+        "field_id"
+      ],
+      "content_hash": "f6929df327a4b197"
+    },
+    "bridge_equipment_well": {
+      "rows": 452,
+      "columns": [
+        "equipment_id",
+        "well_id",
+        "impact_factor"
+      ],
+      "content_hash": "8a938e763b655301"
+    },
+    "fact_production": {
+      "rows": 58686,
+      "columns": [
+        "date",
+        "well_id",
+        "operating_hours",
+        "downtime_hours",
+        "oil_production_bbl",
+        "gas_production_mcf",
+        "water_production_bbl",
+        "pressure_psi",
+        "temperature_c",
+        "water_cut_pct",
+        "potential_production_bbl"
+      ],
+      "content_hash": "5deea4ebf3b87d2b"
+    },
+    "fact_sensor": {
+      "rows": 105216,
+      "columns": [
+        "timestamp",
+        "equipment_id",
+        "temperature_c",
+        "pressure_psi",
+        "vibration_mm_s",
+        "flow_rate",
+        "energy_consumption_kwh",
+        "operating_hours"
+      ],
+      "content_hash": "b590ce318bdbe96f"
+    },
+    "fact_maintenance": {
+      "rows": 1114,
+      "columns": [
+        "maintenance_id",
+        "equipment_id",
+        "date",
+        "maintenance_type",
+        "failure_type",
+        "downtime_hours",
+        "labor_cost",
+        "material_cost",
+        "contractor_cost",
+        "total_cost",
+        "priority",
+        "work_order_status"
+      ],
+      "content_hash": "78edb795713474f6"
+    },
+    "fact_maintenance_material": {
+      "rows": 1192,
+      "columns": [
+        "maintenance_id",
+        "material_id",
+        "quantity",
+        "warehouse_id"
+      ],
+      "content_hash": "d32296488c5ad5ed"
+    },
+    "fact_sales": {
+      "rows": 4384,
+      "columns": [
+        "date",
+        "field_id",
+        "oil_volume_bbl",
+        "gas_volume_mcf",
+        "oil_price_usd",
+        "gas_price_usd",
+        "revenue_usd"
+      ],
+      "content_hash": "180106dcef714d4c"
+    },
+    "fact_operating_cost": {
+      "rows": 30688,
+      "columns": [
+        "date",
+        "field_id",
+        "cost_category",
+        "cost_amount_usd"
+      ],
+      "content_hash": "083b2dcada2bf82d"
+    },
+    "fact_inventory": {
+      "rows": 87680,
+      "columns": [
+        "date",
+        "material_id",
+        "supplier_id",
+        "warehouse_id",
+        "opening_stock",
+        "receipts",
+        "consumption",
+        "closing_stock",
+        "reorder_level",
+        "unit_cost",
+        "stockout_flag"
+      ],
+      "content_hash": "2ca5c8ac4ed182b8"
+    },
+    "fact_purchase_order": {
+      "rows": 1965,
+      "columns": [
+        "po_id",
+        "order_date",
+        "material_id",
+        "supplier_id",
+        "warehouse_id",
+        "quantity",
+        "quoted_lead_time_days",
+        "promised_date",
+        "received_date",
+        "unit_cost",
+        "status"
+      ],
+      "content_hash": "e855f9363f566ec7"
+    },
+    "fact_hse": {
+      "rows": 394,
+      "columns": [
+        "incident_id",
+        "date",
+        "field_id",
+        "incident_type",
+        "severity",
+        "lost_time_flag",
+        "days_lost",
+        "root_cause",
+        "department"
+      ],
+      "content_hash": "4e166e19ceed7620"
+    },
+    "_well_params": {
+      "rows": 60,
+      "columns": [
+        "well_id",
+        "qi_bbl_d",
+        "di_annual",
+        "b",
+        "wc0",
+        "wc_max",
+        "wc_tau_d",
+        "gor0",
+        "p0",
+        "t0",
+        "workover_date",
+        "workover_uplift"
+      ],
+      "content_hash": "5d2c2058dff7d677"
+    },
+    "_sensor_precursors": {
+      "rows": 486,
+      "columns": [
+        "equipment_id",
+        "fail_day",
+        "lead",
+        "severity",
+        "detectable",
+        "false_alarm"
+      ],
+      "content_hash": "04de7d6f01849ba7"
+    }
+  },
+  "total_fact_rows": 291319
+}

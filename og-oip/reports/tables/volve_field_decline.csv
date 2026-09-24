@@ -1,0 +1,2 @@
+peak_month,peak_avg_daily_oil_bbl,months_fitted,nominal_annual_decline_pct,r_squared,note
+2008-12-01,56129.239809661296,94,19.230843535586708,0.41695354488889186,single exponential fit peak->end; ignores shut-ins/wells added; indicative only

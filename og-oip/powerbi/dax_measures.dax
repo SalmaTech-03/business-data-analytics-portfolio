@@ -1,0 +1,102 @@
+// OG-OIP DAX measures (SYNTHETIC data). Table names as in data_model.md. Definitions match business-analysis/kpi_dictionary.md.
+// Create a blank table "_Measures" and add each measure below.
+
+// ===== PAGE 1/2: PRODUCTION =====
+Oil Production (bbl) = SUM ( fact_production[oil_production_bbl] )
+Gas Production (mcf) = SUM ( fact_production[gas_production_mcf] )
+Water Production (bbl) = SUM ( fact_production[water_production_bbl] )
+Potential Production (bbl) = SUM ( fact_production[potential_production_bbl] )
+Production Loss (bbl) =
+    SUMX ( fact_production, MAX ( fact_production[potential_production_bbl] - fact_production[oil_production_bbl], 0 ) )
+Production Loss % = DIVIDE ( [Production Loss (bbl)], [Potential Production (bbl)] )
+Downtime Loss (bbl) =
+    SUMX (
+        fact_production,
+        MIN (
+            fact_production[potential_production_bbl] * fact_production[downtime_hours] / 24,
+            MAX ( fact_production[potential_production_bbl] - fact_production[oil_production_bbl], 0 )
+        )
+    )
+Other Loss (bbl) = [Production Loss (bbl)] - [Downtime Loss (bbl)]
+Well Downtime Hours = SUM ( fact_production[downtime_hours] )
+Water Cut % = DIVIDE ( [Water Production (bbl)], [Water Production (bbl)] + [Oil Production (bbl)] ) * 100
+Avg Daily Oil (bbl/d) = DIVIDE ( [Oil Production (bbl)], DISTINCTCOUNT ( fact_production[date] ) )
+Producing Wells = DISTINCTCOUNT ( fact_production[well_id] )
+Avg Pressure (psi) = AVERAGE ( fact_production[pressure_psi] )
+Oil MoM % =
+    VAR cur = [Oil Production (bbl)]
+    VAR prev = CALCULATE ( [Oil Production (bbl)], DATEADD ( dim_date[date], -1, MONTH ) )
+    RETURN DIVIDE ( cur - prev, prev )
+Imputed Oil Rows = CALCULATE ( COUNTROWS ( fact_production ), FILTER ( fact_production, SEARCH ( "oil_imputed", fact_production[dq_flag], 1, 0 ) > 0 ) )
+
+// ===== PAGE 3: MAINTENANCE & RELIABILITY =====
+Failures = CALCULATE ( COUNTROWS ( fact_maintenance ), fact_maintenance[maintenance_type] = "Corrective" )
+Maintenance Events = COUNTROWS ( fact_maintenance )
+Equipment Downtime Hours = SUM ( fact_maintenance[downtime_hours] )
+Corrective Downtime Hours = CALCULATE ( SUM ( fact_maintenance[downtime_hours] ), fact_maintenance[maintenance_type] = "Corrective" )
+Maintenance Cost (USD) = SUM ( fact_maintenance[total_cost] )
+Corrective Cost Share % = DIVIDE ( CALCULATE ( [Maintenance Cost (USD)], fact_maintenance[maintenance_type] = "Corrective" ), [Maintenance Cost (USD)] )
+Period Hours = ( MAX ( dim_date[date] ) - MIN ( dim_date[date] ) + 1 ) * 24
+Equipment Count = COUNTROWS ( dim_equipment )
+Availability % =
+    DIVIDE ( [Period Hours] * [Equipment Count] - [Equipment Downtime Hours], [Period Hours] * [Equipment Count] ) * 100
+MTBF (h) = DIVIDE ( [Period Hours] * [Equipment Count] - [Equipment Downtime Hours], [Failures] )
+MTTR (h) = DIVIDE ( [Corrective Downtime Hours], [Failures] )
+Priority Score =
+    SUMX (
+        dim_equipment,
+        VAR w = SWITCH ( dim_equipment[criticality], "High", 3, "Medium", 2, 1 )
+        RETURN w * CALCULATE ( SUM ( fact_maintenance[downtime_hours] ) )
+    )
+// Pareto cumulative share: use the precomputed table reports/tables/maintenance_cost_pareto.csv (column cum_share_pct) or a running-total quick measure.
+
+// ===== PAGE 4: FINANCIAL =====
+Revenue (USD) = SUM ( fact_sales[revenue_usd] )
+Opex (USD) = SUM ( fact_operating_cost[cost_amount_usd] )
+Operating Margin (USD) = [Revenue (USD)] - [Opex (USD)]
+Oil Sold (bbl) = SUM ( fact_sales[oil_volume_bbl] )
+Gas Sold (mcf) = SUM ( fact_sales[gas_volume_mcf] )
+Cost per bbl Oil Sold = DIVIDE ( [Opex (USD)], [Oil Sold (bbl)] )
+Cost per BOE Sold = DIVIDE ( [Opex (USD)], [Oil Sold (bbl)] + [Gas Sold (mcf)] / 6 )
+Avg Realised Oil Price = DIVIDE ( SUMX ( fact_sales, fact_sales[oil_volume_bbl] * fact_sales[oil_price_usd] ), [Oil Sold (bbl)] )
+Estimated Lost Revenue (USD) =
+    SUMX (
+        fact_production,
+        MAX ( fact_production[potential_production_bbl] - fact_production[oil_production_bbl], 0 )
+            * LOOKUPVALUE ( fact_sales[oil_price_usd], fact_sales[field_id], RELATED ( dim_well[field_id] ), fact_sales[date], fact_production[date] )
+    )
+// NOTE: RELATED() from fact_production to dim_well requires the many-to-one direction fact -> dim (allowed inside row context).
+
+// ===== PAGE 5: INVENTORY & SUPPLIERS =====
+Stockout Rate % = DIVIDE ( SUM ( fact_inventory[stockout_flag] ), COUNTROWS ( fact_inventory ) ) * 100
+Latest Inventory Date = CALCULATE ( MAX ( fact_inventory[date] ), ALL ( dim_date ) )
+Inventory Value (USD, latest) =
+    CALCULATE ( SUMX ( fact_inventory, fact_inventory[closing_stock] * fact_inventory[unit_cost] ), fact_inventory[date] = [Latest Inventory Date] )
+Consumption Value (USD) = SUMX ( fact_inventory, fact_inventory[consumption] * fact_inventory[unit_cost] )
+Avg Stock Value (USD) = AVERAGEX ( VALUES ( fact_inventory[date] ), CALCULATE ( SUMX ( fact_inventory, fact_inventory[closing_stock] * fact_inventory[unit_cost] ) ) )
+Inventory Turnover (annualised) =
+    DIVIDE ( [Consumption Value (USD)] / DISTINCTCOUNT ( fact_inventory[date] ) * 365.25, [Avg Stock Value (USD)] )
+Items At or Below Reorder =
+    CALCULATE ( COUNTROWS ( FILTER ( fact_inventory, fact_inventory[closing_stock] <= fact_inventory[reorder_level] ) ), fact_inventory[date] = [Latest Inventory Date] )
+POs Received = CALCULATE ( COUNTROWS ( fact_purchase_order ), NOT ISBLANK ( fact_purchase_order[received_date] ) )
+Supplier On-Time % = DIVIDE ( SUM ( fact_purchase_order[on_time] ), [POs Received] ) * 100
+Avg Actual Lead Time (d) = AVERAGE ( fact_purchase_order[actual_lead_days] )
+Avg Quoted Lead Time (d) = CALCULATE ( AVERAGE ( fact_purchase_order[quoted_lead_time_days] ), NOT ISBLANK ( fact_purchase_order[received_date] ) )
+Lead Time Gap (d) = [Avg Actual Lead Time (d)] - [Avg Quoted Lead Time (d)]
+Open POs = CALCULATE ( COUNTROWS ( fact_purchase_order ), fact_purchase_order[status] = "Open" )
+
+// ===== PAGE 6: HSE =====
+Incidents = COUNTROWS ( fact_hse )
+Lost Time Incidents = SUM ( fact_hse[lost_time_flag] )
+Days Lost = SUM ( fact_hse[days_lost] )
+High/Critical Incidents = CALCULATE ( COUNTROWS ( fact_hse ), fact_hse[severity] IN { "High", "Critical" } )
+// What-if parameter table "Exposure Hours per Well-Day" (GENERATESERIES 10-60, default 30 = project assumption)
+Exposure Hours = COUNTROWS ( fact_production ) * SELECTEDVALUE ( 'Exposure Hours per Well-Day'[Exposure Hours per Well-Day Value], 30 )
+Incident Rate per 200k h = DIVIDE ( [Incidents] * 200000, [Exposure Hours] )
+LTI Rate per 200k h = DIVIDE ( [Lost Time Incidents] * 200000, [Exposure Hours] )
+
+// ===== PAGE 7: PREDICTIVE MAINTENANCE & FORECAST (tables from reports/tables) =====
+Latest Failure Risk = MAX ( ml_latest_equipment_risk[failure_risk_score_7d] )
+High Risk Units (>=0.5) = CALCULATE ( DISTINCTCOUNT ( ml_latest_equipment_risk[equipment_id] ), ml_latest_equipment_risk[failure_risk_score_7d] >= 0.5 )
+Forecast Oil (bbl/d) = SUM ( forecast_next_30d[forecast_oil_bbl] )
+// Threshold 0.5 is a display convention for the risk visual; the model thresholds used in evaluation are in ml_model_metrics_test[threshold].

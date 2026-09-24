@@ -1,0 +1,20 @@
+-- psql client-side loader. Run from the project root:  psql -d og_oip -f sql/08_load_data.psql
+-- Loads data/processed/*.csv (cleaned). Order respects foreign keys.
+SET search_path TO og_oip;
+\copy dim_date FROM 'data/processed/dim_date.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_field FROM 'data/processed/dim_field.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_supplier FROM 'data/processed/dim_supplier.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_warehouse FROM 'data/processed/dim_warehouse.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_equipment FROM 'data/processed/dim_equipment.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_well FROM 'data/processed/dim_well.csv' WITH (FORMAT csv, HEADER true)
+\copy dim_material FROM 'data/processed/dim_material.csv' WITH (FORMAT csv, HEADER true)
+\copy bridge_equipment_well FROM 'data/processed/bridge_equipment_well.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_production FROM 'data/processed/fact_production.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_sensor FROM 'data/processed/fact_sensor.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_maintenance FROM 'data/processed/fact_maintenance.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_maintenance_material FROM 'data/processed/fact_maintenance_material.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_sales FROM 'data/processed/fact_sales.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_operating_cost FROM 'data/processed/fact_operating_cost.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_inventory FROM 'data/processed/fact_inventory.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_purchase_order FROM 'data/processed/fact_purchase_order.csv' WITH (FORMAT csv, HEADER true)
+\copy fact_hse FROM 'data/processed/fact_hse.csv' WITH (FORMAT csv, HEADER true)

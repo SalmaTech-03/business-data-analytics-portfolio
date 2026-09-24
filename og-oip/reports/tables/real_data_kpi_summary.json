@@ -1,0 +1,27 @@
+{
+  "volve": {
+    "total_oil_bbl": 63131329.9915841,
+    "first_month": "2008-02-01",
+    "last_month": "2016-09-01",
+    "peak_avg_daily_oil_bbl": 56129.239809661296,
+    "wellbores_producing": 6,
+    "field_decline": {
+      "peak_month": "2008-12-01",
+      "peak_avg_daily_oil_bbl": 56129.239809661296,
+      "months_fitted": 94,
+      "nominal_annual_decline_pct": 19.230843535586708,
+      "r_squared": 0.41695354488889186,
+      "note": "single exponential fit peak->end; ignores shut-ins/wells added; indicative only"
+    }
+  },
+  "bsee": {
+    "months": 18,
+    "total_oil_bbl": 1076644564.0,
+    "total_gas_mcf": 1144332581.0,
+    "total_water_bbl": 617512135.0,
+    "operators": 49.0,
+    "top5_oil_share_pct": 72.15340818829415,
+    "top10_oil_share_pct": 86.49010789042538,
+    "hhi_oil (0-10000)": 1395.4505451264752
+  }
+}

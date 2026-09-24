@@ -1,0 +1,4 @@
+maintenance_type,events,downtime_hours,cost_usd,avg_cost_usd
+Corrective,412,10420.87,6570747.46,15948.416165048544
+Inspection,196,392.04,247217.52,1261.3138775510204
+Preventive,499,3486.05,2862358.98,5736.190340681363

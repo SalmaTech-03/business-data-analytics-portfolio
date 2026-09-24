@@ -1,0 +1,9 @@
+maintenance_id,material_id,quantity,warehouse_id,quarantine_reason
+MNT-000079,MAT-014,6,WH-001,parent_maintenance_record_quarantined
+MNT-000199,MAT-009,7,WH-004,parent_maintenance_record_quarantined
+MNT-000216,MAT-008,5,WH-004,parent_maintenance_record_quarantined
+MNT-000242,MAT-037,2,WH-003,parent_maintenance_record_quarantined
+MNT-000394,MAT-003,1,WH-001,parent_maintenance_record_quarantined
+MNT-000394,MAT-020,5,WH-001,parent_maintenance_record_quarantined
+MNT-000623,MAT-009,5,WH-004,parent_maintenance_record_quarantined
+MNT-001059,MAT-038,5,WH-004,parent_maintenance_record_quarantined

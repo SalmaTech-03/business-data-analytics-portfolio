@@ -1,0 +1,49 @@
+equipment_id,equipment_name,equipment_type,field_id,manufacturer,installation_date,criticality,status
+EQ-0001,Pump 001-01,Pump,FIELD-001,Norvane Systems,2017-05-22,Medium,In Service
+EQ-0002,Pump 001-02,Pump,FIELD-001,Vantor Process,2017-11-19,Medium,In Service
+EQ-0003,Pump 001-03,Pump,FIELD-001,Omnigrid Industrial,2015-01-08,Medium,In Service
+EQ-0004,Pump 001-04,Pump,FIELD-001,Norvane Systems,2014-11-08,Medium,In Service
+EQ-0005,Compressor 001-05,Compressor,FIELD-001,Kestrel Dynamics,2018-06-22,High,In Service
+EQ-0006,Compressor 001-06,Compressor,FIELD-001,Omnigrid Industrial,2015-06-08,High,In Service
+EQ-0007,Separator 001-07,Separator,FIELD-001,Tarsis Machinery,2009-08-08,High,In Service
+EQ-0008,Separator 001-08,Separator,FIELD-001,Vantor Process,2019-01-24,Medium,In Service
+EQ-0009,Generator 001-09,Generator,FIELD-001,Norvane Systems,2018-03-04,High,In Service
+EQ-0010,Valve 001-10,Valve,FIELD-001,Norvane Systems,2020-11-27,Low,In Service
+EQ-0011,Heat Exchanger 001-11,Heat Exchanger,FIELD-001,Omnigrid Industrial,2018-06-07,Medium,In Service
+EQ-0012,Pipeline Equipment 001-12,Pipeline Equipment,FIELD-001,Tarsis Machinery,2014-10-27,Medium,In Service
+EQ-0013,Pump 002-01,Pump,FIELD-002,Omnigrid Industrial,2017-03-16,Low,In Service
+EQ-0014,Pump 002-02,Pump,FIELD-002,Kestrel Dynamics,2020-11-12,Medium,In Service
+EQ-0015,Pump 002-03,Pump,FIELD-002,Vantor Process,2013-03-08,Medium,In Service
+EQ-0016,Pump 002-04,Pump,FIELD-002,Omnigrid Industrial,2010-11-08,Medium,In Service
+EQ-0017,Compressor 002-05,Compressor,FIELD-002,Tarsis Machinery,2012-08-30,High,In Service
+EQ-0018,Compressor 002-06,Compressor,FIELD-002,Kestrel Dynamics,2020-07-07,High,In Service
+EQ-0019,Separator 002-07,Separator,FIELD-002,Tarsis Machinery,2016-07-08,High,In Service
+EQ-0020,Separator 002-08,Separator,FIELD-002,Omnigrid Industrial,2018-04-18,High,In Service
+EQ-0021,Generator 002-09,Generator,FIELD-002,Vantor Process,2019-03-31,High,In Service
+EQ-0022,Valve 002-10,Valve,FIELD-002,Kestrel Dynamics,2011-07-01,Low,In Service
+EQ-0023,Heat Exchanger 002-11,Heat Exchanger,FIELD-002,Vantor Process,2010-12-27,High,In Service
+EQ-0024,Pipeline Equipment 002-12,Pipeline Equipment,FIELD-002,Omnigrid Industrial,2018-06-16,High,In Service
+EQ-0025,Pump 003-01,Pump,FIELD-003,Omnigrid Industrial,2011-12-25,Medium,In Service
+EQ-0026,Pump 003-02,Pump,FIELD-003,Omnigrid Industrial,2014-12-03,Medium,In Service
+EQ-0027,Pump 003-03,Pump,FIELD-003,Kestrel Dynamics,2009-11-21,Medium,In Service
+EQ-0028,Pump 003-04,Pump,FIELD-003,Omnigrid Industrial,2014-06-24,Medium,In Service
+EQ-0029,Compressor 003-05,Compressor,FIELD-003,Norvane Systems,2018-04-05,High,In Service
+EQ-0030,Compressor 003-06,Compressor,FIELD-003,Tarsis Machinery,2015-07-16,High,In Service
+EQ-0031,Separator 003-07,Separator,FIELD-003,Omnigrid Industrial,2012-04-29,High,In Service
+EQ-0032,Separator 003-08,Separator,FIELD-003,Tarsis Machinery,2021-01-22,Medium,In Service
+EQ-0033,Generator 003-09,Generator,FIELD-003,Kestrel Dynamics,2021-03-10,High,In Service
+EQ-0034,Valve 003-10,Valve,FIELD-003,Vantor Process,2018-12-27,Low,In Service
+EQ-0035,Heat Exchanger 003-11,Heat Exchanger,FIELD-003,Norvane Systems,2020-03-22,Medium,In Service
+EQ-0036,Pipeline Equipment 003-12,Pipeline Equipment,FIELD-003,Kestrel Dynamics,2010-01-15,Medium,In Service
+EQ-0037,Pump 004-01,Pump,FIELD-004,Tarsis Machinery,2021-03-26,Medium,In Service
+EQ-0038,Pump 004-02,Pump,FIELD-004,Omnigrid Industrial,2013-10-17,Medium,In Service
+EQ-0039,Pump 004-03,Pump,FIELD-004,Kestrel Dynamics,2008-09-15,High,In Service
+EQ-0040,Pump 004-04,Pump,FIELD-004,Omnigrid Industrial,2017-05-19,High,In Service
+EQ-0041,Compressor 004-05,Compressor,FIELD-004,Vantor Process,2014-11-11,Medium,In Service
+EQ-0042,Compressor 004-06,Compressor,FIELD-004,Omnigrid Industrial,2014-10-17,Medium,In Service
+EQ-0043,Separator 004-07,Separator,FIELD-004,Tarsis Machinery,2011-06-28,High,In Service
+EQ-0044,Separator 004-08,Separator,FIELD-004,Kestrel Dynamics,2016-03-24,High,In Service
+EQ-0045,Generator 004-09,Generator,FIELD-004,Kestrel Dynamics,2009-12-07,Medium,In Service
+EQ-0046,Valve 004-10,Valve,FIELD-004,Kestrel Dynamics,2020-02-09,Low,In Service
+EQ-0047,Heat Exchanger 004-11,Heat Exchanger,FIELD-004,Tarsis Machinery,2011-11-02,Medium,In Service
+EQ-0048,Pipeline Equipment 004-12,Pipeline Equipment,FIELD-004,Kestrel Dynamics,2018-06-09,Medium,In Service

@@ -1,0 +1,180 @@
+stage,table,check,column,failed_rows,total_rows,status,detail
+raw,dim_field,primary_key_uniqueness,field_id,0,4,PASS,
+raw,dim_well,primary_key_uniqueness,well_id,0,60,PASS,
+raw,dim_equipment,primary_key_uniqueness,equipment_id,0,48,PASS,
+raw,dim_supplier,primary_key_uniqueness,supplier_id,6,14,FAIL,
+raw,dim_material,primary_key_uniqueness,material_id,0,40,PASS,
+raw,dim_warehouse,primary_key_uniqueness,warehouse_id,0,4,PASS,
+raw,dim_date,primary_key_uniqueness,date_key,0,1096,PASS,
+raw,fact_production,primary_key_uniqueness,date+well_id,191,58862,FAIL,
+raw,fact_sensor,primary_key_uniqueness,timestamp+equipment_id,105,105321,FAIL,
+raw,fact_maintenance,primary_key_uniqueness,maintenance_id,11,1136,FAIL,
+raw,fact_maintenance_material,primary_key_uniqueness,maintenance_id+material_id,0,1192,PASS,
+raw,fact_sales,primary_key_uniqueness,date+field_id,8,4392,FAIL,
+raw,fact_operating_cost,primary_key_uniqueness,date+field_id+cost_category,34,30718,FAIL,
+raw,fact_inventory,primary_key_uniqueness,date+material_id+warehouse_id,52,87723,FAIL,
+raw,fact_purchase_order,primary_key_uniqueness,po_id,0,1965,PASS,
+raw,fact_hse,primary_key_uniqueness,incident_id,3,397,FAIL,
+raw,bridge_equipment_well,primary_key_uniqueness,equipment_id+well_id,0,452,PASS,
+raw,fact_production,duplicate_rows,*,176,58862,FAIL,
+raw,fact_sensor,duplicate_rows,*,105,105321,FAIL,
+raw,fact_maintenance,duplicate_rows,*,11,1136,FAIL,
+raw,fact_maintenance_material,duplicate_rows,*,0,1192,PASS,
+raw,fact_sales,duplicate_rows,*,8,4392,FAIL,
+raw,fact_operating_cost,duplicate_rows,*,30,30718,FAIL,
+raw,fact_inventory,duplicate_rows,*,43,87723,FAIL,
+raw,fact_purchase_order,duplicate_rows,*,0,1965,PASS,
+raw,fact_hse,duplicate_rows,*,3,397,FAIL,
+raw,fact_production,null_check,date,0,58862,PASS,
+raw,fact_production,null_check,well_id,0,58862,PASS,
+raw,fact_production,null_check,oil_production_bbl,58,58862,FAIL,
+raw,fact_production,null_check,pressure_psi,294,58862,FAIL,
+raw,fact_production,null_check,temperature_c,294,58862,FAIL,
+raw,fact_production,null_check,water_cut_pct,176,58862,FAIL,
+raw,fact_production,null_check,potential_production_bbl,0,58862,PASS,
+raw,fact_sensor,null_check,timestamp,0,105321,PASS,
+raw,fact_sensor,null_check,equipment_id,0,105321,PASS,
+raw,fact_sensor,null_check,temperature_c,421,105321,FAIL,
+raw,fact_sensor,null_check,pressure_psi,421,105321,FAIL,
+raw,fact_sensor,null_check,vibration_mm_s,420,105321,FAIL,
+raw,fact_sensor,null_check,flow_rate,420,105321,FAIL,
+raw,fact_sensor,null_check,energy_consumption_kwh,420,105321,FAIL,
+raw,fact_maintenance,null_check,maintenance_id,0,1136,PASS,
+raw,fact_maintenance,null_check,equipment_id,7,1136,FAIL,
+raw,fact_maintenance,null_check,date,0,1136,PASS,
+raw,fact_maintenance,null_check,maintenance_type,0,1136,PASS,
+raw,fact_maintenance,null_check,total_cost,0,1136,PASS,
+raw,fact_inventory,null_check,date,0,87723,PASS,
+raw,fact_inventory,null_check,material_id,0,87723,PASS,
+raw,fact_inventory,null_check,supplier_id,876,87723,FAIL,
+raw,fact_inventory,null_check,warehouse_id,0,87723,PASS,
+raw,fact_inventory,null_check,unit_cost,440,87723,FAIL,
+raw,fact_sales,null_check,date,0,4392,PASS,
+raw,fact_sales,null_check,field_id,0,4392,PASS,
+raw,fact_sales,null_check,oil_price_usd,13,4392,FAIL,
+raw,fact_sales,null_check,revenue_usd,13,4392,FAIL,
+raw,fact_operating_cost,null_check,date,0,30718,PASS,
+raw,fact_operating_cost,null_check,field_id,0,30718,PASS,
+raw,fact_operating_cost,null_check,cost_category,0,30718,PASS,
+raw,fact_operating_cost,null_check,cost_amount_usd,0,30718,PASS,
+raw,fact_hse,null_check,incident_id,0,397,PASS,
+raw,fact_hse,null_check,date,0,397,PASS,
+raw,fact_hse,null_check,field_id,0,397,PASS,
+raw,fact_hse,null_check,severity,0,397,PASS,
+raw,fact_production,numeric_validity,operating_hours,0,58862,PASS,
+raw,fact_production,range_check,operating_hours,0,58862,PASS,"allowed [0, 24]"
+raw,fact_production,numeric_validity,downtime_hours,0,58862,PASS,
+raw,fact_production,range_check,downtime_hours,29,58862,FAIL,"allowed [0, 24]"
+raw,fact_production,numeric_validity,oil_production_bbl,0,58862,PASS,
+raw,fact_production,range_check,oil_production_bbl,29,58862,FAIL,"allowed [0, 10000]"
+raw,fact_production,numeric_validity,gas_production_mcf,0,58862,PASS,
+raw,fact_production,range_check,gas_production_mcf,0,58862,PASS,"allowed [0, 20000]"
+raw,fact_production,numeric_validity,water_production_bbl,0,58862,PASS,
+raw,fact_production,range_check,water_production_bbl,0,58862,PASS,"allowed [0, 20000]"
+raw,fact_production,numeric_validity,pressure_psi,0,58862,PASS,
+raw,fact_production,range_check,pressure_psi,0,58862,PASS,"allowed [0, 10000]"
+raw,fact_production,numeric_validity,temperature_c,0,58862,PASS,
+raw,fact_production,range_check,temperature_c,0,58862,PASS,"allowed [-50, 200]"
+raw,fact_production,numeric_validity,water_cut_pct,0,58862,PASS,
+raw,fact_production,range_check,water_cut_pct,0,58862,PASS,"allowed [0, 100]"
+raw,fact_production,numeric_validity,potential_production_bbl,0,58862,PASS,
+raw,fact_production,range_check,potential_production_bbl,0,58862,PASS,"allowed [0, 10000]"
+raw,fact_sensor,numeric_validity,temperature_c,0,105321,PASS,
+raw,fact_sensor,range_check,temperature_c,31,105321,FAIL,"allowed [-50, 300]"
+raw,fact_sensor,numeric_validity,pressure_psi,0,105321,PASS,
+raw,fact_sensor,range_check,pressure_psi,0,105321,PASS,"allowed [0, 5000]"
+raw,fact_sensor,numeric_validity,vibration_mm_s,0,105321,PASS,
+raw,fact_sensor,range_check,vibration_mm_s,52,105321,FAIL,"allowed [0, 50]"
+raw,fact_sensor,numeric_validity,flow_rate,0,105321,PASS,
+raw,fact_sensor,range_check,flow_rate,0,105321,PASS,"allowed [0, 5000]"
+raw,fact_sensor,numeric_validity,energy_consumption_kwh,0,105321,PASS,
+raw,fact_sensor,range_check,energy_consumption_kwh,0,105321,PASS,"allowed [0, 50000]"
+raw,fact_sensor,numeric_validity,operating_hours,0,105321,PASS,
+raw,fact_sensor,range_check,operating_hours,0,105321,PASS,"allowed [0, 12]"
+raw,fact_maintenance,numeric_validity,downtime_hours,0,1136,PASS,
+raw,fact_maintenance,range_check,downtime_hours,0,1136,PASS,"allowed [0, 500]"
+raw,fact_maintenance,numeric_validity,labor_cost,0,1136,PASS,
+raw,fact_maintenance,range_check,labor_cost,3,1136,FAIL,"allowed [0, None]"
+raw,fact_maintenance,numeric_validity,material_cost,0,1136,PASS,
+raw,fact_maintenance,range_check,material_cost,0,1136,PASS,"allowed [0, None]"
+raw,fact_maintenance,numeric_validity,contractor_cost,0,1136,PASS,
+raw,fact_maintenance,range_check,contractor_cost,0,1136,PASS,"allowed [0, None]"
+raw,fact_maintenance,numeric_validity,total_cost,0,1136,PASS,
+raw,fact_maintenance,range_check,total_cost,0,1136,PASS,"allowed [0, None]"
+raw,fact_inventory,numeric_validity,opening_stock,0,87723,PASS,
+raw,fact_inventory,range_check,opening_stock,0,87723,PASS,"allowed [0, None]"
+raw,fact_inventory,numeric_validity,receipts,0,87723,PASS,
+raw,fact_inventory,range_check,receipts,0,87723,PASS,"allowed [0, None]"
+raw,fact_inventory,numeric_validity,consumption,0,87723,PASS,
+raw,fact_inventory,range_check,consumption,9,87723,FAIL,"allowed [0, None]"
+raw,fact_inventory,numeric_validity,closing_stock,0,87723,PASS,
+raw,fact_inventory,range_check,closing_stock,0,87723,PASS,"allowed [0, None]"
+raw,fact_inventory,numeric_validity,unit_cost,0,87723,PASS,
+raw,fact_inventory,range_check,unit_cost,0,87723,PASS,"allowed [0.01, None]"
+raw,fact_inventory,numeric_validity,stockout_flag,0,87723,PASS,
+raw,fact_inventory,range_check,stockout_flag,0,87723,PASS,"allowed [0, 1]"
+raw,fact_sales,numeric_validity,oil_volume_bbl,0,4392,PASS,
+raw,fact_sales,range_check,oil_volume_bbl,0,4392,PASS,"allowed [0, None]"
+raw,fact_sales,numeric_validity,gas_volume_mcf,0,4392,PASS,
+raw,fact_sales,range_check,gas_volume_mcf,0,4392,PASS,"allowed [0, None]"
+raw,fact_sales,numeric_validity,oil_price_usd,0,4392,PASS,
+raw,fact_sales,range_check,oil_price_usd,0,4392,PASS,"allowed [0, 300]"
+raw,fact_sales,numeric_validity,gas_price_usd,0,4392,PASS,
+raw,fact_sales,range_check,gas_price_usd,0,4392,PASS,"allowed [0, 50]"
+raw,fact_sales,numeric_validity,revenue_usd,0,4392,PASS,
+raw,fact_sales,range_check,revenue_usd,0,4392,PASS,"allowed [0, None]"
+raw,fact_operating_cost,numeric_validity,cost_amount_usd,0,30718,PASS,
+raw,fact_operating_cost,range_check,cost_amount_usd,11,30718,FAIL,"allowed [0, None]"
+raw,fact_hse,numeric_validity,days_lost,0,397,PASS,
+raw,fact_hse,range_check,days_lost,0,397,PASS,"allowed [0, 365]"
+raw,fact_hse,numeric_validity,lost_time_flag,0,397,PASS,
+raw,fact_hse,range_check,lost_time_flag,0,397,PASS,"allowed [0, 1]"
+raw,dim_well,referential_integrity,field_id,0,60,PASS,-> field_id in parent
+raw,dim_well,referential_integrity,primary_equipment_id,0,60,PASS,-> equipment_id in parent
+raw,dim_equipment,referential_integrity,field_id,0,48,PASS,-> field_id in parent
+raw,dim_material,referential_integrity,primary_supplier_id,0,40,PASS,-> supplier_id in parent
+raw,dim_warehouse,referential_integrity,field_id,0,4,PASS,-> field_id in parent
+raw,bridge_equipment_well,referential_integrity,equipment_id,0,452,PASS,-> equipment_id in parent
+raw,bridge_equipment_well,referential_integrity,well_id,0,452,PASS,-> well_id in parent
+raw,fact_production,referential_integrity,well_id,176,58862,FAIL,-> well_id in parent
+raw,fact_sensor,referential_integrity,equipment_id,0,105321,PASS,-> equipment_id in parent
+raw,fact_maintenance,referential_integrity,equipment_id,0,1136,PASS,-> equipment_id in parent
+raw,fact_maintenance_material,referential_integrity,maintenance_id,0,1192,PASS,-> maintenance_id in parent
+raw,fact_maintenance_material,referential_integrity,material_id,0,1192,PASS,-> material_id in parent
+raw,fact_maintenance_material,referential_integrity,warehouse_id,0,1192,PASS,-> warehouse_id in parent
+raw,fact_sales,referential_integrity,field_id,0,4392,PASS,-> field_id in parent
+raw,fact_operating_cost,referential_integrity,field_id,0,30718,PASS,-> field_id in parent
+raw,fact_inventory,referential_integrity,material_id,0,87723,PASS,-> material_id in parent
+raw,fact_inventory,referential_integrity,supplier_id,0,87723,PASS,-> supplier_id in parent
+raw,fact_inventory,referential_integrity,warehouse_id,0,87723,PASS,-> warehouse_id in parent
+raw,fact_purchase_order,referential_integrity,material_id,0,1965,PASS,-> material_id in parent
+raw,fact_purchase_order,referential_integrity,supplier_id,0,1965,PASS,-> supplier_id in parent
+raw,fact_purchase_order,referential_integrity,warehouse_id,0,1965,PASS,-> warehouse_id in parent
+raw,fact_hse,referential_integrity,field_id,26,397,FAIL,-> field_id in parent
+raw,fact_production,date_validity,date,44,58862,FAIL,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_production,date_format_consistency,date,8767,58862,FAIL,non-ISO formatted values
+raw,fact_maintenance,date_validity,date,0,1136,PASS,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_maintenance,date_format_consistency,date,185,1136,FAIL,non-ISO formatted values
+raw,fact_sales,date_validity,date,1,4392,FAIL,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_sales,date_format_consistency,date,623,4392,FAIL,non-ISO formatted values
+raw,fact_operating_cost,date_validity,date,14,30718,FAIL,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_operating_cost,date_format_consistency,date,4664,30718,FAIL,non-ISO formatted values
+raw,fact_inventory,date_validity,date,43,87723,FAIL,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_inventory,date_format_consistency,date,13272,87723,FAIL,non-ISO formatted values
+raw,fact_hse,date_validity,date,0,397,PASS,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_hse,date_format_consistency,date,62,397,FAIL,non-ISO formatted values
+raw,fact_sensor,date_validity,timestamp,0,105321,PASS,"parsable and within [2000-01-01, 2030-12-31]"
+raw,fact_sensor,date_format_consistency,timestamp,2045,105321,FAIL,non-ISO formatted values
+raw,fact_maintenance,domain_check,maintenance_type,81,1136,FAIL,"allowed: ['Corrective', 'Inspection', 'Preventive']"
+raw,fact_operating_cost,domain_check,cost_category,644,30718,FAIL,"allowed: ['Energy', 'Labor', 'Maintenance', 'Other', 'Production', 'Transportation', 'Utilities']"
+raw,fact_hse,domain_check,severity,46,397,FAIL,"allowed: ['Critical', 'High', 'Low', 'Medium']"
+raw,fact_maintenance,domain_check,priority,0,1136,PASS,"allowed: ['Critical', 'High', 'Low', 'Medium']"
+raw,fact_production,unit_consistency,oil_uom,253,58862,FAIL,oil must be reported in bbl
+raw,fact_sales,unit_consistency,gas_uom,12,4392,FAIL,gas must be reported in mcf
+raw,fact_production,operating_plus_downtime_eq_24,-,29,58862,FAIL,
+raw,fact_production,water_cut_consistent_with_volumes,-,395,58862,FAIL,tolerance 1 percentage point
+raw,fact_maintenance,total_cost_eq_components,-,14,1136,FAIL,
+raw,fact_inventory,closing_eq_open_plus_receipts_minus_consumption,-,96,87723,FAIL,
+raw,fact_sales,revenue_eq_volume_x_price,-,12,4392,FAIL,tolerance $1
+raw,fact_hse,lost_time_flag_consistent_with_days_lost,-,0,397,PASS,
+raw,dim_supplier,supplier_name_uniqueness_per_id,supplier_name,16,14,FAIL,one canonical name per supplier_id

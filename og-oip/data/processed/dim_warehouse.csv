@@ -1,0 +1,5 @@
+warehouse_id,warehouse_name,field_id
+WH-001,Synthetic Warehouse 1,FIELD-001
+WH-002,Synthetic Warehouse 2,FIELD-002
+WH-003,Synthetic Warehouse 3,FIELD-003
+WH-004,Synthetic Warehouse 4,FIELD-004

@@ -1,0 +1,2 @@
+date,field_id,oil_volume_bbl,gas_volume_mcf,oil_price_usd,gas_price_usd,revenue_usd,gas_uom,quarantine_reason
+,FIELD-002,2887.9,2455.4,76.36,3.761,229754.8,mcf,invalid_date_or_field

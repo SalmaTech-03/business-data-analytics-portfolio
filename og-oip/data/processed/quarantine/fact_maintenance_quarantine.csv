@@ -1,0 +1,8 @@
+maintenance_id,equipment_id,date,maintenance_type,failure_type,downtime_hours,labor_cost,material_cost,contractor_cost,total_cost,priority,work_order_status,quarantine_reason
+MNT-000079,,2022-03-19,Preventive,,5.97,2172.15,302.28,3352.26,5826.68,Medium,Completed,missing_or_unknown_equipment_id
+MNT-000199,,2022-07-17,Preventive,,6.95,1777.08,4739.91,0.0,6516.99,Medium,Completed,missing_or_unknown_equipment_id
+MNT-000216,,2022-08-06,Preventive,,5.79,1707.77,3182.75,0.0,4890.52,Medium,Completed,missing_or_unknown_equipment_id
+MNT-000242,,2022-09-04,Corrective,Corrosion Leak,14.28,3800.46,217.3,0.0,4017.76,High,Completed,missing_or_unknown_equipment_id
+MNT-000394,,2023-02-05,Corrective,Actuator Failure,8.25,1349.87,8390.13,10307.04,20047.04,High,Completed,missing_or_unknown_equipment_id
+MNT-000623,,2023-09-19,Corrective,Bearing Failure,6.52,1427.57,3385.65,0.0,4813.22,High,Completed,missing_or_unknown_equipment_id
+MNT-001059,,2024-11-01,Preventive,,6.12,1394.6,352.7,0.0,1747.3,Medium,Completed,missing_or_unknown_equipment_id

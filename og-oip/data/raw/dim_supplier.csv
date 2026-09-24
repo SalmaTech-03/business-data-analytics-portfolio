@@ -1,0 +1,15 @@
+supplier_id,supplier_name,supplier_category,region,lead_time_days,supplier_rating
+SUP-001,Aurelia Industrial Supply,Mechanical Parts,Synthetic Region S,16,3.7
+SUP-002,Borealis Machine Parts,Mechanical Parts,Synthetic Region E,13,3.0
+SUP-003,Cobalt Valve & Fitting Co,Valves & Fittings,Synthetic Region S,24,3.7
+SUP-004,Delmar Lubricants & Chemicals,Lubricants & Chemicals,Synthetic Region E,6,3.4
+SUP-005,Everglen Filtration Systems,Filtration,Synthetic Region W,11,3.2
+SUP-006,Fulcrum Electrical Works,Electrical,Synthetic Region S,21,4.3
+SUP-007,Granite Pipe & Flange Ltd,Piping,Synthetic Region S,26,3.7
+SUP-008,Helix Chemical Trading,Lubricants & Chemicals,Synthetic Region S,8,4.0
+SUP-004,DELMAR LUBRICANTS & CHEMICALS,Lubricants & Chemicals,Synthetic Region E,6,3.4
+SUP-005,Everglen Filtration Systems Inc.,Filtration,Synthetic Region W,11,3.2
+SUP-001,AURELIA INDUSTRIAL SUPPLY,Mechanical Parts,Synthetic Region S,16,3.7
+SUP-007,Granite Pipe and Flange Ltd,Piping,Synthetic Region S,26,3.7
+SUP-002,BOREALIS MACHINE PARTS,Mechanical Parts,Synthetic Region E,13,3.0
+SUP-008,Helix Chemical Trading,Lubricants & Chemicals,Synthetic Region S,8,4.0

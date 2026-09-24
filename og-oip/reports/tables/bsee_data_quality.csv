@@ -1,0 +1,11 @@
+check,value
+rows,85205
+distinct months,18
+unparsable month,0
+non-numeric oil/gas/water values,0
+negative oil/gas/water values,0
+days_on_production > 31,0
+"rows repeated on (lease, completion, month, API, interval)",0
+rows with all three volumes = 0,54656
+rows with volumes > 0 but days_on_production == 0,0
+rows with days_on_production > 0 but all volumes = 0,1207

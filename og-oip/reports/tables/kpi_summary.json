@@ -1,0 +1,114 @@
+{
+  "notice": "All operational, production, financial, maintenance, inventory, sensor and HSE data in this project are synthetic/simulated and created for portfolio demonstration purposes. They do not represent actual operations of a real company.",
+  "period": [
+    "2022-01-01",
+    "2024-12-31"
+  ],
+  "production": {
+    "total_oil_bbl": 13352299.0585673,
+    "total_gas_mcf": 15155984.4,
+    "total_water_bbl": 10658935.600000001,
+    "avg_daily_oil_bbl_portfolio": 12182.754615481113,
+    "potential_oil_bbl": 14736427.7,
+    "production_loss_bbl": 1384128.9031575,
+    "production_loss_pct": 9.392567393775495,
+    "downtime_loss_bbl": 926382.2448428334,
+    "other_loss_bbl": 457746.65831466665,
+    "downtime_share_of_loss_pct": 66.92889966603207,
+    "total_downtime_hours": 88999.23999999999,
+    "maintenance_associated_downtime_share_pct": 93.24750863041078,
+    "estimated_lost_revenue_usd": 95544789.75505155,
+    "overall_water_cut_pct": 44.391451549938736,
+    "wells_with_decline_fit": 55,
+    "median_nominal_annual_decline_pct": 15.116523014526951
+  },
+  "maintenance": {
+    "failure_count": 412,
+    "total_maintenance_events": 1107,
+    "total_downtime_hours_equipment": 14298.96,
+    "corrective_downtime_hours": 10420.87,
+    "total_maintenance_cost_usd": 9680323.96,
+    "corrective_cost_share_pct": 67.87735087328628,
+    "fleet_mttr_hours": 25.29337378640777,
+    "fleet_mtbf_hours": 3029.8374757281554,
+    "fleet_availability_pct": 98.86749163625304,
+    "top10_equipment_cost_share_pct": 36.39914577817497
+  },
+  "financial": {
+    "revenue_usd_synthetic": 956148995.57,
+    "operating_cost_usd": 314236614.49,
+    "operating_margin_usd": 641912381.08,
+    "maintenance_cost_usd": 9728183.48,
+    "energy_cost_usd": 14105024.879999999,
+    "cost_per_bbl_oil_sold": 23.87928811461057,
+    "cost_per_boe_sold": 20.293140479962613,
+    "revenue_per_bbl_oil_sold": 72.65912466237485,
+    "estimated_lost_revenue_usd": 95544789.75505157,
+    "lost_revenue_pct_of_revenue": 9.99266748150411
+  },
+  "inventory": {
+    "inventory_value_end_usd": 491061.8,
+    "avg_inventory_value_usd": 500754.2282349715,
+    "stockout_rate_pct": 2.139507285735477,
+    "stockout_days_total": 1875,
+    "annualised_inventory_turnover": 10.702454379819665,
+    "avg_days_of_inventory": 34.28028641679957,
+    "low_stock_items_at_end": 31,
+    "consumption_value_usd": 16081566.09,
+    "supplier_association": {
+      "n_suppliers": 8,
+      "spearman_rho_ontime_vs_stockout_days": -0.6826469692905576,
+      "p_value": 0.06209269238231715
+    },
+    "overall_on_time_delivery_pct": 73.82307294361097
+  },
+  "hse": {
+    "incident_count": 394,
+    "lost_time_incidents": 29,
+    "days_lost": 170,
+    "portfolio_incident_rate_per_200k_h": 44.791560087764175,
+    "portfolio_ltir_per_200k_h": 3.296840717119698,
+    "high_or_critical_share_pct": 17.766497461928935,
+    "maintenance_association": {
+      "n_field_months": 144,
+      "spearman_rho_failures_vs_incidents": -0.03820967738954551,
+      "p_value": 0.6493351019867414
+    },
+    "post_failure_window": {
+      "window_days": 3,
+      "incident_share_in_window_pct": 33.24873096446701,
+      "field_day_share_in_window_pct": 31.95970695970696
+    }
+  },
+  "forecast": {
+    "best_model_by_MAE": "Moving average (30d)",
+    "series": "portfolio daily oil (processed)",
+    "horizon_days": 30,
+    "backtest_origins": 6,
+    "arima": "not included (statsmodels unavailable in build environment)"
+  },
+  "ml": {
+    "dataset": {
+      "train_rows": 17280,
+      "val_rows": 7200,
+      "test_rows": 25392,
+      "train_positive_rate_pct": 4.855324074074074,
+      "test_positive_rate_pct": 5.797101449275362,
+      "test_failure_events_positive_rows": 1472,
+      "split": {
+        "train_end": "2023-01-31",
+        "val_end": "2023-06-30",
+        "test_start": "2023-07-15",
+        "test_end": "2024-12-24"
+      },
+      "note": "Positive-rate baseline: PR-AUC of a random model equals the test positive rate."
+    },
+    "best_model_by_test_pr_auc": "Random Forest",
+    "event_level": {
+      "failure_windows": 198,
+      "failure_windows_with_alert_pct": 71.71717171717171,
+      "false_alert_days_per_equipment_year": 4.027646502835538
+    },
+    "warning": "Sensor-failure relationship is SIMULATED; metrics apply to synthetic data only."
+  }
+}

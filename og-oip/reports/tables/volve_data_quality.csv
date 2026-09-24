@@ -1,0 +1,12 @@
+check,value
+daily rows,15634.0
+"duplicate (date, wellbore) rows",0.0
+rows with ON_STREAM_HRS > 24,20.0
+rows with negative oil volume,0.0
+production rows with missing oil volume,0.0
+production rows with missing on-stream hours,0.0
+production rows with oil > 0 but on-stream hours == 0,1.0
+daily-vs-monthly sheet: matched well-months,311.0
+daily-vs-monthly sheet: well-months with |oil diff| > 1 Sm3,0.0
+daily-vs-monthly sheet: max |oil diff| Sm3,1.4551915228366852e-11
+monthly sheet well-months not found in daily,215.0

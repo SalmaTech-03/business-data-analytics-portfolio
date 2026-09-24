@@ -1,0 +1,15 @@
+date,field_id,cost_category,cost_amount_usd,quarantine_reason
+,FIELD-004,Transportation,4046.46,invalid_date_category_or_field
+,FIELD-001,Labor,21946.44,invalid_date_category_or_field
+,FIELD-001,Maintenance,0.0,invalid_date_category_or_field
+,FIELD-001,Other,3859.29,invalid_date_category_or_field
+,FIELD-003,Energy,3463.34,invalid_date_category_or_field
+,FIELD-003,Energy,3271.99,invalid_date_category_or_field
+,FIELD-001,Energy,3141.42,invalid_date_category_or_field
+,FIELD-004,Transportation,4648.11,invalid_date_category_or_field
+,FIELD-002,Other,2805.58,invalid_date_category_or_field
+,FIELD-002,Utilities,5920.3,invalid_date_category_or_field
+,FIELD-002,Maintenance,0.0,invalid_date_category_or_field
+,FIELD-004,Production,26699.06,invalid_date_category_or_field
+,FIELD-001,Labor,24613.65,invalid_date_category_or_field
+,FIELD-001,Energy,3098.87,invalid_date_category_or_field

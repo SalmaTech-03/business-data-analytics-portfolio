@@ -1,0 +1,131 @@
+{
+  "dim_supplier": {
+    "rows_in": 14,
+    "name_variants_standardised": 5,
+    "duplicate_suppliers_removed": 6,
+    "rows_out": 8,
+    "rows_quarantined": 0
+  },
+  "dim_date": {
+    "rows_in": 1096,
+    "rows_out": 1096,
+    "rows_quarantined": 0
+  },
+  "dim_field": {
+    "rows_in": 4,
+    "rows_out": 4,
+    "rows_quarantined": 0
+  },
+  "dim_well": {
+    "rows_in": 60,
+    "rows_out": 60,
+    "rows_quarantined": 0
+  },
+  "dim_equipment": {
+    "rows_in": 48,
+    "rows_out": 48,
+    "rows_quarantined": 0
+  },
+  "dim_material": {
+    "rows_in": 40,
+    "rows_out": 40,
+    "rows_quarantined": 0
+  },
+  "dim_warehouse": {
+    "rows_in": 4,
+    "rows_out": 4,
+    "rows_quarantined": 0
+  },
+  "bridge_equipment_well": {
+    "rows_in": 452,
+    "rows_out": 452,
+    "rows_quarantined": 0
+  },
+  "fact_maintenance_material": {
+    "rows_in": 1192,
+    "rows_out": 1184,
+    "rows_quarantined": 8
+  },
+  "fact_purchase_order": {
+    "rows_in": 1965,
+    "rows_out": 1965,
+    "rows_quarantined": 0
+  },
+  "fact_production": {
+    "rows_in": 58862,
+    "well_id_normalised": 176,
+    "quarantined_invalid_date": 44,
+    "oil_m3_to_bbl_converted": 252,
+    "duplicates_removed": 176,
+    "negative_oil_set_missing": 29,
+    "outlier_oil_set_missing": 58,
+    "downtime_clipped": 29,
+    "operating_hours_recomputed": 66,
+    "oil_imputed": 144,
+    "water_cut_missing_before": 176,
+    "pressure_psi_imputed": 293,
+    "temperature_c_imputed": 293,
+    "rows_out": 58642,
+    "rows_quarantined": 44
+  },
+  "fact_sensor": {
+    "rows_in": 105321,
+    "duplicates_removed": 105,
+    "spikes_set_missing": 83,
+    "temperature_c_imputed": 451,
+    "pressure_psi_imputed": 420,
+    "vibration_mm_s_imputed": 471,
+    "flow_rate_imputed": 420,
+    "energy_consumption_kwh_imputed": 420,
+    "rows_out": 105216,
+    "rows_quarantined": 0
+  },
+  "fact_maintenance": {
+    "rows_in": 1136,
+    "type_names_standardised": 81,
+    "duplicate_ids_removed": 11,
+    "business_duplicates_removed": 11,
+    "labor_cost_sign_corrected": 3,
+    "material_cost_sign_corrected": 0,
+    "contractor_cost_sign_corrected": 0,
+    "total_cost_recomputed": 11,
+    "rows_out": 1107,
+    "rows_quarantined": 7
+  },
+  "fact_inventory": {
+    "rows_in": 87723,
+    "quarantined_invalid_date": 43,
+    "duplicates_removed": 43,
+    "supplier_id_filled_from_material": 876,
+    "unit_cost_filled_from_material": 438,
+    "negative_consumption_sign_corrected": 9,
+    "closing_stock_recomputed": 87,
+    "rows_out": 87637,
+    "rows_quarantined": 43
+  },
+  "fact_sales": {
+    "rows_in": 4392,
+    "duplicates_removed": 8,
+    "gas_mmcf_to_mcf_converted": 12,
+    "oil_price_filled_month_median": 13,
+    "revenue_recomputed": 26,
+    "rows_out": 4383,
+    "rows_quarantined": 1
+  },
+  "fact_operating_cost": {
+    "rows_in": 30718,
+    "category_names_standardised": 644,
+    "duplicates_removed": 30,
+    "negative_amount_sign_corrected": 11,
+    "rows_out": 30674,
+    "rows_quarantined": 14
+  },
+  "fact_hse": {
+    "rows_in": 397,
+    "severity_standardised": 46,
+    "field_id_standardised": 26,
+    "duplicates_removed": 3,
+    "rows_out": 394,
+    "rows_quarantined": 0
+  }
+}

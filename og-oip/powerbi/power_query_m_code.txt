@@ -1,0 +1,127 @@
+// ===== Parameter: DataFolder (Text) e.g. "C:\projects\og-oip" =====
+// Each block below is ONE query. Names match the table names in data_model.md.
+
+// ---- Helper: load a CSV from data\processed ----
+// Query name: fnLoadProcessed (Function)
+(tableName as text) as table =>
+let
+    Source = Csv.Document(File.Contents(DataFolder & "\data\processed\" & tableName & ".csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+
+// ---- dim_date ----
+let
+    T = fnLoadProcessed("dim_date"),
+    Typed = Table.TransformColumnTypes(T, {{"date_key", Int64.Type}, {"date", type date}, {"year", Int64.Type}, {"quarter", Int64.Type}, {"month", Int64.Type}, {"month_name", type text}, {"week", Int64.Type}, {"day", Int64.Type}, {"day_of_week", Int64.Type}, {"is_weekend", type logical}}, "en-US")
+in
+    Typed
+
+// ---- dim_field ----
+let
+    T = fnLoadProcessed("dim_field"),
+    Typed = Table.TransformColumnTypes(T, {{"commission_date", type date}}, "en-US")
+in
+    Typed
+
+// ---- dim_well ----
+let
+    T = fnLoadProcessed("dim_well"),
+    Typed = Table.TransformColumnTypes(T, {{"depth_m", Int64.Type}, {"latitude", type number}, {"longitude", type number}, {"commission_date", type date}}, "en-US")
+in
+    Typed
+
+// ---- dim_equipment ----
+let
+    T = fnLoadProcessed("dim_equipment"),
+    Typed = Table.TransformColumnTypes(T, {{"installation_date", type date}}, "en-US")
+in
+    Typed
+
+// ---- dim_supplier / dim_material / dim_warehouse / bridge_equipment_well ----
+// Repeat the pattern: T = fnLoadProcessed("<table>") then Table.TransformColumnTypes with numeric columns:
+//   dim_supplier: lead_time_days Int64, supplier_rating number
+//   dim_material: unit_cost number, reorder_level Int64, lead_time_days Int64
+//   bridge_equipment_well: impact_factor number
+
+// ---- fact_production ----
+let
+    T = fnLoadProcessed("fact_production"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"operating_hours", type number}, {"downtime_hours", type number}, {"oil_production_bbl", type number}, {"gas_production_mcf", type number}, {"water_production_bbl", type number}, {"pressure_psi", type number}, {"temperature_c", type number}, {"water_cut_pct", type number}, {"potential_production_bbl", type number}}, "en-US")
+in
+    Typed
+
+// ---- fact_sensor ----
+let
+    T = fnLoadProcessed("fact_sensor"),
+    Typed = Table.TransformColumnTypes(T, {{"timestamp", type datetime}, {"temperature_c", type number}, {"pressure_psi", type number}, {"vibration_mm_s", type number}, {"flow_rate", type number}, {"energy_consumption_kwh", type number}, {"operating_hours", type number}}, "en-US"),
+    AddDate = Table.AddColumn(Typed, "date", each DateTime.Date([timestamp]), type date)
+in
+    AddDate
+
+// ---- fact_maintenance ----
+let
+    T = fnLoadProcessed("fact_maintenance"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"downtime_hours", type number}, {"labor_cost", type number}, {"material_cost", type number}, {"contractor_cost", type number}, {"total_cost", type number}}, "en-US")
+in
+    Typed
+
+// ---- fact_maintenance_material ----
+let
+    T = fnLoadProcessed("fact_maintenance_material"),
+    Typed = Table.TransformColumnTypes(T, {{"quantity", Int64.Type}}, "en-US")
+in
+    Typed
+
+// ---- fact_sales ----
+let
+    T = fnLoadProcessed("fact_sales"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"oil_volume_bbl", type number}, {"gas_volume_mcf", type number}, {"oil_price_usd", type number}, {"gas_price_usd", type number}, {"revenue_usd", type number}}, "en-US")
+in
+    Typed
+
+// ---- fact_operating_cost ----
+let
+    T = fnLoadProcessed("fact_operating_cost"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"cost_amount_usd", type number}}, "en-US")
+in
+    Typed
+
+// ---- fact_inventory ----
+let
+    T = fnLoadProcessed("fact_inventory"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"opening_stock", type number}, {"receipts", type number}, {"consumption", type number}, {"closing_stock", type number}, {"reorder_level", type number}, {"unit_cost", type number}, {"stockout_flag", Int64.Type}}, "en-US")
+in
+    Typed
+
+// ---- fact_purchase_order ----
+let
+    T = fnLoadProcessed("fact_purchase_order"),
+    Typed = Table.TransformColumnTypes(T, {{"order_date", type date}, {"promised_date", type date}, {"received_date", type date}, {"quantity", Int64.Type}, {"quoted_lead_time_days", Int64.Type}, {"unit_cost", type number}}, "en-US"),
+    OnTime = Table.AddColumn(Typed, "on_time", each if [received_date] = null then null else if [received_date] <= [promised_date] then 1 else 0, Int64.Type),
+    Lead = Table.AddColumn(OnTime, "actual_lead_days", each if [received_date] = null then null else Duration.Days([received_date] - [order_date]), Int64.Type)
+in
+    Lead
+
+// ---- fact_hse ----
+let
+    T = fnLoadProcessed("fact_hse"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"lost_time_flag", Int64.Type}, {"days_lost", Int64.Type}}, "en-US")
+in
+    Typed
+
+// ---- Output tables from reports\tables (forecast_next_30d, ml_latest_equipment_risk, ml_model_metrics_test, forecast_backtest_summary) ----
+// Query name: fnLoadReport (Function)
+(tableName as text) as table =>
+let
+    Source = Csv.Document(File.Contents(DataFolder & "\reports\tables\" & tableName & ".csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+in
+    Promoted
+
+// Example: ml_latest_equipment_risk
+let
+    T = fnLoadReport("ml_latest_equipment_risk"),
+    Typed = Table.TransformColumnTypes(T, {{"date", type date}, {"failure_risk_score_7d", type number}}, "en-US")
+in
+    Typed

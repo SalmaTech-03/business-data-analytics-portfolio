@@ -1,0 +1,398 @@
+incident_id,date,field_id,incident_type,severity,lost_time_flag,days_lost,root_cause,department
+HSE-000001,2022-01-04,FIELD-001,Equipment Damage,High,0,0,Procedure Not Followed,Maintenance
+HSE-000002,2022-01-04,FIELD-002,Injury,High,0,0,Procedure Not Followed,Maintenance
+HSE-000003,2022/01/06,FIELD-004,First Aid, medium,0,0,Inadequate Maintenance,Operations
+HSE-000004,2022-01-09,FIELD-002,Injury,HIGH,1,5,Inadequate Maintenance,Operations
+HSE-000005,2022-01-10,FIELD-003,Near Miss,LOW,0,0,Equipment Failure,Maintenance
+HSE-000006,2022-01-14,FIELD-002,Equipment Damage,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000007,2022-01-15,FIELD-002,Near Miss,LOW,0,0,Procedure Not Followed,Maintenance
+HSE-000008,2022-01-16,FIELD-003,Near Miss,Low,0,0,Unknown,Maintenance
+HSE-000009,2022-01-26,FIELD-004,Environmental Release,Medium,0,0,Unknown,Operations
+HSE-000010,2022-01-28,FIELD-001,Near Miss, medium,0,0,Human Error,Facilities
+HSE-000011,2022-01-30,FIELD-004,Vehicle Incident,High,0,0,Contractor Activity,Logistics
+HSE-000012,2022-02-02,Field-004,Equipment Damage,Low,0,0,Environmental Conditions,Operations
+HSE-000013,2022-02-03,FIELD-001,Near Miss,Low,0,0,Procedure Not Followed,Operations
+HSE-000014,03-Feb-2022,FIELD-003,Near Miss,Low,0,0,Environmental Conditions,Maintenance
+HSE-000015,2022-02-04,FIELD-001,Near Miss,Low,0,0,Human Error,Maintenance
+HSE-000016,2022-02-04,FIELD-003,Near Miss,Medium,0,0,Equipment Failure,Operations
+HSE-000017,2022-02-07,FIELD-002,Injury, medium,0,0,Equipment Failure,Operations
+HSE-000018,2022-02-07,FIELD-003,Injury,Medium,0,0,Contractor Activity,Maintenance
+HSE-000019,2022-02-11,FIELD-004,First Aid,Low,0,0,Human Error,Maintenance
+HSE-000020,2022-02-14,FIELD-003,Injury,Medium,0,0,Equipment Failure,Operations
+HSE-000021,2022/02/17,FIELD-004,First Aid,Low,0,0,Inadequate Maintenance,Operations
+HSE-000022,2022-02-19,FIELD-002,First Aid,Low,0,0,Human Error,Operations
+HSE-000023,2022-02-19,FIELD-002,Near Miss, medium,0,0,Human Error,Facilities
+HSE-000024,2022-02-27,FIELD-003,First Aid,Low,0,0,Unknown,Operations
+HSE-000025,2022-03-01,FIELD-003,Process Safety Event,Medium,0,0,Equipment Failure,Operations
+HSE-000026,2022-03-02,FIELD-004,Near Miss,Medium,0,0,Contractor Activity,Maintenance
+HSE-000027,2022-03-04,FIELD-001,First Aid,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000028,2022-03-06,FIELD-001,Near Miss,LOW,0,0,Equipment Failure,Operations
+HSE-000029,2022-03-10,FIELD-002,Near Miss,Medium,0,0,Human Error,Operations
+HSE-000030,2022-03-12,FIELD-003,Near Miss,Low,0,0,Unknown,Facilities
+HSE-000031,2022-03-13,FIELD-001,Near Miss,Medium,0,0,Contractor Activity,Facilities
+HSE-000032,2022-03-14,FIELD-004,Injury,MEDIUM,0,0,Procedure Not Followed,Logistics
+HSE-000033,2022-03-25,FIELD-002,First Aid,Medium,0,0,Human Error,Maintenance
+HSE-000034,2022-03-28,FIELD-004,First Aid,Low,0,0,Unknown,Operations
+HSE-000035,2022-04-01,FIELD-002,First Aid,Medium,0,0,Unknown,Operations
+HSE-000036,2022-04-03,FIELD-001,Vehicle Incident,Low,0,0,Contractor Activity,Logistics
+HSE-000037,2022-04-03,FIELD-001,Injury,Medium,1,2,Human Error,Maintenance
+HSE-000038,2022/04/05,FIELD-002,Equipment Damage,Low,0,0,Equipment Failure,Maintenance
+HSE-000039,09-Apr-2022,FIELD-001,Equipment Damage,Medium,0,0,Equipment Failure,Maintenance
+HSE-000040,2022/04/09,FIELD-002,Vehicle Incident,Medium,0,0,Equipment Failure,Logistics
+HSE-000041,2022-04-10,FIELD-001,Near Miss,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000042,2022-04-10,FIELD-002,Process Safety Event,High,0,0,Inadequate Maintenance,Operations
+HSE-000043,2022-04-12,FIELD-003,Injury,Low,0,0,Human Error,Maintenance
+HSE-000044,2022-04-13,FIELD-001,Near Miss,Low,0,0,Environmental Conditions,Maintenance
+HSE-000045,20220417,FIELD-004,Environmental Release,Medium,0,0,Human Error,Operations
+HSE-000046,2022-04-23,FIELD-002,Injury,High,1,3,Human Error,Logistics
+HSE-000047,2022-05-01,FIELD002,Environmental Release,Low,0,0,Unknown,Facilities
+HSE-000048,2022-05-01,FIELD-003,First Aid,Low,0,0,Equipment Failure,Maintenance
+HSE-000049,2022-05-12,FIELD-002,Injury,High,1,2,Equipment Failure,Maintenance
+HSE-000050,2022-05-16,FIELD-001,Equipment Damage,Critical,0,0,Unknown,Maintenance
+HSE-000051,2022-05-21,FIELD-004,Environmental Release,High,0,0,Unknown,Operations
+HSE-000052,2022-05-22,FIELD-002,Environmental Release,Low,0,0,Environmental Conditions,Facilities
+HSE-000053,2022-05-23,FIELD-002,Equipment Damage,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000054,20220527,FIELD-001,Environmental Release,High,0,0,Equipment Failure,Operations
+HSE-000055,2022-05-29,FIELD-004,Equipment Damage,Medium,0,0,Inadequate Maintenance,Maintenance
+HSE-000056,2022-06-02,FIELD003,First Aid,Low,0,0,Inadequate Maintenance,Operations
+HSE-000057,07-Jun-2022,FIELD-004,First Aid,Low,0,0,Inadequate Maintenance,Operations
+HSE-000058,2022-06-11,Field-003,Near Miss,Low,0,0,Human Error,Operations
+HSE-000059,2022-06-15,FIELD-003,Equipment Damage,High,0,0,Unknown,Operations
+HSE-000060,2022-06-17,FIELD004,Injury,Medium,0,0,Unknown,Maintenance
+HSE-000061,2022-06-29,FIELD-004,Vehicle Incident,Medium,0,0,Human Error,Logistics
+HSE-000062,2022-07-01,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Operations
+HSE-000063,2022-07-02,FIELD-003,Environmental Release,High,0,0,Human Error,Operations
+HSE-000064,2022-07-04,FIELD-001,Equipment Damage,Medium,0,0,Unknown,Maintenance
+HSE-000065,2022-07-04,FIELD-004,Vehicle Incident,Low,0,0,Environmental Conditions,Logistics
+HSE-000066,05-Jul-2022,FIELD-004,Equipment Damage,HIGH,0,0,Equipment Failure,Operations
+HSE-000067,2022-07-08,FIELD-001,Vehicle Incident,High,0,0,Human Error,Logistics
+HSE-000068,2022-07-12,FIELD-003,Equipment Damage,MEDIUM,0,0,Environmental Conditions,Maintenance
+HSE-000069,2022/07/14,FIELD-001,Equipment Damage,High,0,0,Human Error,Maintenance
+HSE-000070,2022-07-18,FIELD-002,Equipment Damage,Low,0,0,Procedure Not Followed,Operations
+HSE-000071,2022-07-18,FIELD-003,Near Miss,Medium,0,0,Unknown,Maintenance
+HSE-000072,19-Jul-2022,FIELD-001,Environmental Release,Medium,0,0,Environmental Conditions,Operations
+HSE-000073,2022-07-21,FIELD-002,Near Miss,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000074,2022-07-27,FIELD-001,Near Miss,Medium,0,0,Inadequate Maintenance,Maintenance
+HSE-000075,28-Jul-2022,FIELD-001,Injury,Medium,1,2,Human Error,Operations
+HSE-000076,2022-07-29,FIELD-003,Near Miss,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000077,2022-08-09,FIELD-001,Injury,Critical,1,6,Procedure Not Followed,Logistics
+HSE-000078,2022-08-10,FIELD-001,Equipment Damage,Low,0,0,Equipment Failure,Operations
+HSE-000079,2022-08-11,FIELD-003,Near Miss,Low,0,0,Procedure Not Followed,Facilities
+HSE-000080,2022-08-13,Field-001,Equipment Damage,Medium,0,0,Human Error,Maintenance
+HSE-000081,2022-08-13,FIELD-003,Equipment Damage,Medium,0,0,Human Error,Maintenance
+HSE-000082,2022-08-15,FIELD-004,First Aid,LOW,0,0,Inadequate Maintenance,Maintenance
+HSE-000083,2022-08-19,FIELD-001,Injury,High,1,3,Unknown,Logistics
+HSE-000084,2022-08-19,FIELD-002,Near Miss,Low,0,0,Equipment Failure,Facilities
+HSE-000085,2022-08-24,FIELD-002,Environmental Release,HIGH,0,0,Unknown,Facilities
+HSE-000086,25-Aug-2022,FIELD-001,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000087,2022-08-28,FIELD-002,Vehicle Incident,Medium,0,0,Inadequate Maintenance,Logistics
+HSE-000088,2022-08-29,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Facilities
+HSE-000089,2022-08-30,FIELD-004,Equipment Damage,High,0,0,Procedure Not Followed,Maintenance
+HSE-000090,2022-08-31,FIELD-002,Equipment Damage,Low,0,0,Human Error,Maintenance
+HSE-000091,2022-09-08,FIELD-002,Near Miss,Low,0,0,Unknown,Maintenance
+HSE-000092,2022-09-09,FIELD-004,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000093,2022-09-10,FIELD-003,Equipment Damage,High,0,0,Environmental Conditions,Maintenance
+HSE-000094,2022-09-12,FIELD-001,Near Miss,Low,0,0,Unknown,Maintenance
+HSE-000095,2022-09-20,FIELD-003,Injury,Critical,1,3,Environmental Conditions,Maintenance
+HSE-000096,2022-09-24,FIELD-003,Near Miss,Low,0,0,Equipment Failure,Maintenance
+HSE-000097,2022-09-26,FIELD-002,Process Safety Event,Low,0,0,Human Error,Facilities
+HSE-000098,2022-10-06,FIELD-003,Equipment Damage,Medium,0,0,Equipment Failure,Maintenance
+HSE-000099,2022-10-06,FIELD004,Near Miss,Medium,0,0,Contractor Activity,Maintenance
+HSE-000100,14-Oct-2022,FIELD-004,Near Miss,Low,0,0,Contractor Activity,Facilities
+HSE-000101,22-Oct-2022,FIELD-001,Near Miss,Low,0,0,Procedure Not Followed,Facilities
+HSE-000102,2022-10-26,FIELD-002,Environmental Release,Medium,0,0,Procedure Not Followed,Operations
+HSE-000103,2022-10-28,FIELD-001,First Aid,Medium,0,0,Environmental Conditions,Maintenance
+HSE-000104,2022-10-28,FIELD-004,Vehicle Incident,Medium,0,0,Environmental Conditions,Logistics
+HSE-000105,2022-10-29,FIELD-002,Near Miss,Low,0,0,Contractor Activity,Operations
+HSE-000106,2022-10-30,FIELD-001,Near Miss,Medium,0,0,Environmental Conditions,Facilities
+HSE-000107,2022-11-03,FIELD-001,Near Miss,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000108,2022-11-06,FIELD-003,Near Miss,Medium,0,0,Procedure Not Followed,Facilities
+HSE-000109,2022-11-09,FIELD-001,Equipment Damage,Medium,0,0,Equipment Failure,Operations
+HSE-000110,2022-11-13,FIELD-003,Equipment Damage,Medium,0,0,Equipment Failure,Operations
+HSE-000111,2022-11-13,FIELD-004,First Aid,Low,0,0,Unknown,Operations
+HSE-000112,2022-11-14,FIELD-004,Near Miss,Low,0,0,Human Error,Operations
+HSE-000113,2022-11-15,FIELD-004,Near Miss,Low,0,0,Environmental Conditions,Maintenance
+HSE-000114,20221118,FIELD-001,Equipment Damage,High,0,0,Procedure Not Followed,Maintenance
+HSE-000115,2022-11-18,FIELD-004,Near Miss,LOW,0,0,Inadequate Maintenance,Facilities
+HSE-000116,2022-11-23,FIELD-003,Injury,MEDIUM,0,0,Human Error,Logistics
+HSE-000117,2022-11-23,FIELD-003,Near Miss,Low,0,0,Unknown,Operations
+HSE-000118,2022-11-24,FIELD-001,First Aid,Low,0,0,Unknown,Operations
+HSE-000119,28-Nov-2022,FIELD-003,Near Miss,Low,0,0,Inadequate Maintenance,Facilities
+HSE-000120,2022-11-29,FIELD-002,Near Miss,Low,0,0,Inadequate Maintenance,Facilities
+HSE-000121,2022-11-29,FIELD-003,Near Miss,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000122,2022-12-02,FIELD-001,Near Miss,High,0,0,Procedure Not Followed,Maintenance
+HSE-000123,2022/12/02,FIELD-001,Injury,Medium,1,2,Procedure Not Followed,Operations
+HSE-000124,2022-12-03,FIELD-003,Near Miss,Low,0,0,Unknown,Operations
+HSE-000125,2022-12-03,FIELD-004,Near Miss,Medium,0,0,Human Error,Maintenance
+HSE-000126,2022/12/05,FIELD-001,Near Miss,Low,0,0,Unknown,Facilities
+HSE-000127,2022-12-06,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000128,2022-12-06,FIELD-004,Near Miss,Low,0,0,Procedure Not Followed,Facilities
+HSE-000129,2022-12-07,FIELD-002,First Aid,Low,0,0,Unknown,Maintenance
+HSE-000130,2022-12-08,FIELD-001,Vehicle Incident,Low,0,0,Human Error,Logistics
+HSE-000131,2022-12-09,FIELD-004,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000132,20221210,FIELD-002,Environmental Release,HIGH,0,0,Unknown,Facilities
+HSE-000133,12-Dec-2022,FIELD-003,Injury,Medium,0,0,Human Error,Maintenance
+HSE-000134,2022-12-17,FIELD-003,First Aid,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000135,2022-12-20,FIELD-001,Equipment Damage,Critical,0,0,Unknown,Maintenance
+HSE-000136,2022-12-21,FIELD-002,Environmental Release,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000137,22-Dec-2022,FIELD-001,Process Safety Event,Critical,0,0,Procedure Not Followed,Operations
+HSE-000138,2022/12/25,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000139,2022-12-30,FIELD-002,Equipment Damage, medium,0,0,Equipment Failure,Operations
+HSE-000140,2022-12-31,FIELD-001,Near Miss, medium,0,0,Procedure Not Followed,Facilities
+HSE-000141,2023-01-02,FIELD-001,Near Miss,Low,0,0,Human Error,Facilities
+HSE-000142,2023-01-21,FIELD-003,Injury,Critical,1,3,Equipment Failure,Maintenance
+HSE-000143,2023-01-24,FIELD-004,Injury,High,1,3,Human Error,Logistics
+HSE-000144,2023-01-25,FIELD-002,Near Miss,Low,0,0,Inadequate Maintenance,Facilities
+HSE-000145,2023-01-27,FIELD-002,Vehicle Incident,Low,0,0,Contractor Activity,Logistics
+HSE-000146,2023-01-29,FIELD004,Vehicle Incident,Low,0,0,Environmental Conditions,Logistics
+HSE-000147,2023-02-04,FIELD-003,Environmental Release,High,0,0,Inadequate Maintenance,Operations
+HSE-000148,2023-02-06,FIELD-001,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000149,2023-02-09,FIELD-002,First Aid,Medium,0,0,Contractor Activity,Maintenance
+HSE-000150,2023-02-13,FIELD-001,Equipment Damage,Medium,0,0,Human Error,Operations
+HSE-000151,2023-02-15,FIELD-001,Near Miss,High,0,0,Unknown,Maintenance
+HSE-000152,2023-02-15,FIELD-003,First Aid,Low,0,0,Unknown,Operations
+HSE-000153,18-Feb-2023,FIELD-003,Near Miss,Medium,0,0,Equipment Failure,Maintenance
+HSE-000154,2023-02-19,FIELD-003,Injury,High,0,0,Environmental Conditions,Logistics
+HSE-000155,2023-02-21,FIELD-001,Near Miss,Medium,0,0,Contractor Activity,Maintenance
+HSE-000156,2023-02-21,FIELD-001,Near Miss,Medium,0,0,Equipment Failure,Operations
+HSE-000157,2023-02-23,FIELD-003,Near Miss,High,0,0,Human Error,Maintenance
+HSE-000158,2023-02-25,FIELD-004,Near Miss,Low,0,0,Unknown,Operations
+HSE-000159,2023-02-26,FIELD001,Environmental Release,Medium,0,0,Procedure Not Followed,Facilities
+HSE-000160,2023-02-26,FIELD-002,Process Safety Event,Medium,0,0,Human Error,Operations
+HSE-000161,2023-02-27,FIELD-001,Injury,Critical,1,3,Human Error,Logistics
+HSE-000162,2023-03-03,FIELD-001,Near Miss,Low,0,0,Procedure Not Followed,Facilities
+HSE-000163,2023-03-04,FIELD-002,Environmental Release,Medium,0,0,Equipment Failure,Operations
+HSE-000164,2023-03-05,FIELD-002,Injury,High,1,4,Contractor Activity,Maintenance
+HSE-000165,2023-04-06,FIELD-001,Near Miss,Low,0,0,Inadequate Maintenance,Operations
+HSE-000166,2023-04-06,FIELD-002,Near Miss,Low,0,0,Contractor Activity,Operations
+HSE-000167,2023-04-09,FIELD-003,Near Miss,Low,0,0,Unknown,Facilities
+HSE-000168,2023-04-09,FIELD-003,Near Miss,Medium,0,0,Equipment Failure,Facilities
+HSE-000169,2023-04-09,FIELD-003,Process Safety Event,HIGH,0,0,Unknown,Facilities
+HSE-000170,2023-04-11,FIELD-003,First Aid,Medium,0,0,Contractor Activity,Operations
+HSE-000171,2023/04/12,FIELD-002,Environmental Release,Low,0,0,Contractor Activity,Operations
+HSE-000172,2023-04-13,FIELD-004,Equipment Damage,Low,0,0,Unknown,Operations
+HSE-000173,2023-04-14,FIELD-001,Near Miss,High,0,0,Equipment Failure,Operations
+HSE-000174,2023-04-17,FIELD-003,Near Miss,Medium,0,0,Environmental Conditions,Maintenance
+HSE-000175,2023-04-17,FIELD-003,First Aid,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000176,2023-04-17,FIELD-004,Equipment Damage,Medium,0,0,Procedure Not Followed,Maintenance
+HSE-000177,2023-04-19,FIELD-004,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000178,2023-04-23,FIELD-004,Environmental Release,Low,0,0,Equipment Failure,Facilities
+HSE-000179,2023-04-27,FIELD-004,Near Miss,Low,0,0,Human Error,Operations
+HSE-000180,2023-04-30,FIELD-004,Injury,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000181,2023/05/01,FIELD-002,First Aid,Medium,0,0,Equipment Failure,Operations
+HSE-000182,2023-05-09,FIELD-002,First Aid,Low,0,0,Unknown,Operations
+HSE-000183,2023-05-12,FIELD-004,Environmental Release,LOW,0,0,Human Error,Operations
+HSE-000184,2023/05/17,FIELD-001,Vehicle Incident,Medium,0,0,Unknown,Logistics
+HSE-000185,2023-05-21,FIELD-002,First Aid, low,0,0,Environmental Conditions,Operations
+HSE-000186,2023-05-21,FIELD-004,Injury,Medium,1,10,Unknown,Operations
+HSE-000187,2023-05-26,FIELD-001,Equipment Damage,Medium,0,0,Equipment Failure,Maintenance
+HSE-000188,30-May-2023,FIELD-002,Process Safety Event,High,0,0,Unknown,Operations
+HSE-000189,2023/05/31,FIELD-001,Equipment Damage,High,0,0,Environmental Conditions,Maintenance
+HSE-000190,01-Jun-2023,FIELD-002,Near Miss,Medium,0,0,Equipment Failure,Facilities
+HSE-000191,02-Jun-2023,Field-001,Equipment Damage,High,0,0,Equipment Failure,Operations
+HSE-000192,2023-06-03,FIELD-002,Near Miss,Low,0,0,Equipment Failure,Maintenance
+HSE-000193,2023-06-04,FIELD-001,Near Miss,Low,0,0,Unknown,Operations
+HSE-000194,2023-06-07,FIELD-004,Environmental Release,Medium,0,0,Contractor Activity,Facilities
+HSE-000195,2023-06-12,FIELD-002,Equipment Damage,High,0,0,Equipment Failure,Maintenance
+HSE-000196,2023-06-14,FIELD-003,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000197,2023-06-16,FIELD-002,First Aid,Low,0,0,Equipment Failure,Maintenance
+HSE-000198,2023-06-21,FIELD-002,Vehicle Incident,Low,0,0,Unknown,Logistics
+HSE-000199,2023-06-21,FIELD-004,First Aid,Low,0,0,Contractor Activity,Maintenance
+HSE-000200,2023-06-26,FIELD-002,First Aid,Medium,0,0,Equipment Failure,Operations
+HSE-000201,20230627,FIELD-004,First Aid,Medium,0,0,Human Error,Operations
+HSE-000202,2023-06-29,FIELD-002,First Aid,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000203,2023-06-30,FIELD-001,Process Safety Event,Low,0,0,Human Error,Facilities
+HSE-000204,2023-07-01,FIELD-003,Near Miss,Low,0,0,Environmental Conditions,Operations
+HSE-000205,2023-07-02,FIELD-002,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000206,2023/07/06,FIELD-001,Equipment Damage,Low,0,0,Unknown,Operations
+HSE-000207,2023-07-06,FIELD-003,Process Safety Event,Low,0,0,Equipment Failure,Operations
+HSE-000208,2023-07-06,FIELD-004,Equipment Damage, low,0,0,Human Error,Maintenance
+HSE-000209,2023-07-08,FIELD-003,Near Miss,Low,0,0,Equipment Failure,Maintenance
+HSE-000210,2023-07-17,FIELD-001,Injury,Critical,1,4,Environmental Conditions,Operations
+HSE-000211,2023-07-23,FIELD001,Near Miss,Low,0,0,Human Error,Operations
+HSE-000212,2023-07-25,FIELD-004,Near Miss,MEDIUM,0,0,Human Error,Operations
+HSE-000213,2023-07-28,FIELD-002,Vehicle Incident,MEDIUM,0,0,Contractor Activity,Logistics
+HSE-000214,2023-07-30,FIELD-002,Equipment Damage,Medium,0,0,Human Error,Operations
+HSE-000215,2023-07-30,FIELD-004,Near Miss,Low,0,0,Unknown,Operations
+HSE-000216,2023-07-31,FIELD-002,Vehicle Incident, medium,0,0,Contractor Activity,Logistics
+HSE-000217,2023-08-01,FIELD-001,Near Miss,Low,0,0,Unknown,Operations
+HSE-000218,2023-08-02,FIELD-003,Injury,High,0,0,Unknown,Logistics
+HSE-000219,2023-08-09,FIELD-004,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000220,2023-08-15,FIELD-002,Vehicle Incident,LOW,0,0,Inadequate Maintenance,Logistics
+HSE-000221,2023-08-27,FIELD-002,Injury,Critical,1,21,Unknown,Logistics
+HSE-000222,2023-08-29,FIELD-002,Equipment Damage,Low,0,0,Inadequate Maintenance,Operations
+HSE-000223,2023-08-29,FIELD-002,Injury,High,1,3,Unknown,Maintenance
+HSE-000224,20230830,FIELD-002,Near Miss,Low,0,0,Human Error,Facilities
+HSE-000225,30-Aug-2023,FIELD-002,First Aid,Low,0,0,Inadequate Maintenance,Operations
+HSE-000226,2023-09-01,FIELD004,First Aid,Medium,0,0,Human Error,Operations
+HSE-000227,2023-09-04,FIELD-002,Injury,Medium,1,40,Equipment Failure,Maintenance
+HSE-000228,05-Sep-2023,FIELD-001,Equipment Damage,Low,0,0,Unknown,Operations
+HSE-000229,2023-09-08,FIELD-003,Near Miss,LOW,0,0,Environmental Conditions,Operations
+HSE-000230,2023-09-10,FIELD-001,Injury,Medium,0,0,Human Error,Logistics
+HSE-000231,2023-09-11,FIELD-004,Near Miss,Low,0,0,Inadequate Maintenance,Operations
+HSE-000232,12-Sep-2023,FIELD-002,Injury,MEDIUM,0,0,Inadequate Maintenance,Maintenance
+HSE-000233,2023-09-14,Field-004,First Aid,Low,0,0,Procedure Not Followed,Operations
+HSE-000234,2023-09-15,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Operations
+HSE-000235,2023-09-16,FIELD-001,Injury,High,1,2,Human Error,Maintenance
+HSE-000236,2023-09-21,FIELD-001,Equipment Damage,Low,0,0,Equipment Failure,Maintenance
+HSE-000237,2023-09-27,FIELD-003,Near Miss,High,0,0,Human Error,Maintenance
+HSE-000238,2023-09-28,FIELD-001,Injury,Critical,1,5,Contractor Activity,Operations
+HSE-000239,2023-09-28,FIELD-002,Near Miss,Low,0,0,Environmental Conditions,Operations
+HSE-000240,2023-09-29,FIELD004,Process Safety Event,LOW,0,0,Inadequate Maintenance,Operations
+HSE-000241,2023-10-01,FIELD-001,Near Miss,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000242,2023-10-08,Field-003,Near Miss,Low,0,0,Unknown,Operations
+HSE-000243,2023-10-11,FIELD003,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000244,2023-10-12,FIELD-001,Near Miss,LOW,0,0,Human Error,Facilities
+HSE-000245,2023-10-18,FIELD-001,Near Miss,Medium,0,0,Contractor Activity,Maintenance
+HSE-000246,2023-10-22,FIELD-001,Near Miss,High,0,0,Contractor Activity,Maintenance
+HSE-000247,22-Oct-2023,FIELD-003,Environmental Release,Medium,0,0,Inadequate Maintenance,Facilities
+HSE-000248,2023-10-23,FIELD-001,Near Miss,Low,0,0,Unknown,Maintenance
+HSE-000249,2023-10-27,FIELD-001,Near Miss,Low,0,0,Equipment Failure,Maintenance
+HSE-000250,2023-10-28,FIELD-003,Vehicle Incident,Low,0,0,Unknown,Logistics
+HSE-000251,01-Nov-2023,FIELD-003,Process Safety Event,High,0,0,Inadequate Maintenance,Facilities
+HSE-000252,2023-11-02,FIELD-001,Injury,Medium,0,0,Unknown,Operations
+HSE-000253,20231103,FIELD-003,Near Miss,LOW,0,0,Equipment Failure,Operations
+HSE-000254,20231108,FIELD-004,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000255,08-Nov-2023,FIELD-004,Near Miss,Low,0,0,Human Error,Maintenance
+HSE-000256,2023-11-18,FIELD-001,Injury,MEDIUM,0,0,Human Error,Maintenance
+HSE-000257,2023-11-27,FIELD-003,Equipment Damage,High,0,0,Human Error,Maintenance
+HSE-000258,2023-12-08,FIELD-003,Vehicle Incident,Low,0,0,Unknown,Logistics
+HSE-000259,11-Dec-2023,FIELD-001,Near Miss,Low,0,0,Human Error,Maintenance
+HSE-000260,2023-12-15,FIELD-001,Near Miss,Low,0,0,Equipment Failure,Maintenance
+HSE-000261,2023-12-20,FIELD-002,Near Miss,Low,0,0,Contractor Activity,Facilities
+HSE-000262,2023-12-21,FIELD-001,Near Miss,Medium,0,0,Inadequate Maintenance,Maintenance
+HSE-000263,2023-12-21,FIELD-001,Process Safety Event,Medium,0,0,Procedure Not Followed,Facilities
+HSE-000264,2023/12/24,FIELD-001,First Aid,Medium,0,0,Human Error,Maintenance
+HSE-000265,2023-12-25,FIELD-004,Equipment Damage,High,0,0,Equipment Failure,Operations
+HSE-000266,2023-12-31,FIELD-001,Near Miss,Low,0,0,Equipment Failure,Facilities
+HSE-000267,2024-01-05,FIELD-004,First Aid,LOW,0,0,Unknown,Maintenance
+HSE-000268,2024-01-06,FIELD-002,Injury,Medium,0,0,Human Error,Logistics
+HSE-000269,2024-01-08,FIELD-001,Injury,High,1,11,Human Error,Maintenance
+HSE-000270,2024-01-08,FIELD-003,Near Miss,Medium,0,0,Unknown,Facilities
+HSE-000271,2024-01-11,FIELD-004,First Aid,Low,0,0,Human Error,Operations
+HSE-000272,2024-01-12,FIELD-004,Injury,Medium,1,4,Procedure Not Followed,Logistics
+HSE-000273,2024-01-13,FIELD-001,First Aid,Low,0,0,Unknown,Operations
+HSE-000274,2024-01-17,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000275,2024-01-21,FIELD-004,Near Miss,Medium,0,0,Inadequate Maintenance,Facilities
+HSE-000276,2024-02-06,FIELD-001,Equipment Damage,Medium,0,0,Procedure Not Followed,Operations
+HSE-000277,10-Feb-2024,FIELD-002,First Aid,Low,0,0,Unknown,Operations
+HSE-000278,2024-02-18,FIELD-004,Environmental Release,High,0,0,Procedure Not Followed,Operations
+HSE-000279,2024-02-22,FIELD-003,Near Miss,Medium,0,0,Unknown,Maintenance
+HSE-000280,2024-02-28,FIELD-002,Equipment Damage,Low,0,0,Contractor Activity,Operations
+HSE-000281,2024-02-29,FIELD-002,First Aid,Low,0,0,Contractor Activity,Maintenance
+HSE-000282,2024-03-05,FIELD-003,Injury,Medium,1,2,Procedure Not Followed,Logistics
+HSE-000283,2024-03-11,FIELD-003,Equipment Damage,Low,0,0,Inadequate Maintenance,Operations
+HSE-000284,2024-03-15,FIELD-001,Environmental Release,Critical,0,0,Unknown,Facilities
+HSE-000285,2024-03-16,FIELD-002,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000286,19-Mar-2024,FIELD-001,Near Miss,Low,0,0,Equipment Failure,Facilities
+HSE-000287,2024-03-20,FIELD-001,Equipment Damage,Medium,0,0,Human Error,Operations
+HSE-000288,26-Mar-2024,FIELD-001,Vehicle Incident,Critical,0,0,Procedure Not Followed,Logistics
+HSE-000289,29-Mar-2024,FIELD-003,Equipment Damage,Medium,0,0,Equipment Failure,Maintenance
+HSE-000290,2024-03-31,Field-003,Vehicle Incident, low,0,0,Environmental Conditions,Logistics
+HSE-000291,2024-04-03,FIELD-003,Near Miss,Medium,0,0,Inadequate Maintenance,Maintenance
+HSE-000292,2024-04-10,FIELD-004,Near Miss,Medium,0,0,Environmental Conditions,Operations
+HSE-000293,2024-04-13,FIELD-002,Environmental Release,High,0,0,Unknown,Operations
+HSE-000294,2024-04-13,FIELD003,Injury,Medium,1,5,Unknown,Logistics
+HSE-000295,2024-04-15,FIELD001,Environmental Release,Low,0,0,Human Error,Operations
+HSE-000296,2024-04-15,FIELD002,Environmental Release,Medium,0,0,Unknown,Facilities
+HSE-000297,2024-04-16,FIELD-004,Process Safety Event,Medium,0,0,Human Error,Facilities
+HSE-000298,2024-04-24,Field-001,First Aid,Low,0,0,Contractor Activity,Operations
+HSE-000299,2024/04/25,FIELD-002,Equipment Damage,Medium,0,0,Human Error,Operations
+HSE-000300,2024-04-28,FIELD-001,Equipment Damage,Medium,0,0,Environmental Conditions,Operations
+HSE-000301,2024-04-29,FIELD-003,Equipment Damage,Medium,0,0,Contractor Activity,Operations
+HSE-000302,2024-04-29,FIELD-003,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000303,2024-05-03,FIELD-004,Vehicle Incident,Medium,0,0,Equipment Failure,Logistics
+HSE-000304,2024-05-05,FIELD-002,Injury,Medium,1,3,Unknown,Logistics
+HSE-000305,2024-05-07,FIELD-004,Vehicle Incident,High,0,0,Equipment Failure,Logistics
+HSE-000306,2024-05-09,FIELD-001,Near Miss, low,0,0,Environmental Conditions,Operations
+HSE-000307,2024-05-09,FIELD-003,Near Miss,Medium,0,0,Equipment Failure,Facilities
+HSE-000308,2024-05-12,FIELD-001,Equipment Damage,High,0,0,Unknown,Maintenance
+HSE-000309,2024-05-18,FIELD-003,Near Miss,Low,0,0,Inadequate Maintenance,Operations
+HSE-000310,2024-05-20,FIELD-003,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000311,2024-05-20,FIELD-003,Equipment Damage,Medium,0,0,Environmental Conditions,Operations
+HSE-000312,2024-05-21,FIELD-002,Process Safety Event,MEDIUM,0,0,Unknown,Operations
+HSE-000313,2024-06-05,FIELD-002,Injury,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000314,2024-06-05,FIELD-004,Equipment Damage, high,0,0,Inadequate Maintenance,Operations
+HSE-000315,2024-06-10,FIELD-001,Near Miss, low,0,0,Contractor Activity,Facilities
+HSE-000316,2024-06-11,FIELD-002,Equipment Damage,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000317,2024-06-11,FIELD-003,Injury,Low,0,0,Human Error,Operations
+HSE-000318,2024-06-14,FIELD-004,Equipment Damage,Low,0,0,Unknown,Maintenance
+HSE-000319,2024/06/16,FIELD-001,Environmental Release,Medium,0,0,Equipment Failure,Facilities
+HSE-000320,2024-06-18,FIELD-001,Equipment Damage,Low,0,0,Environmental Conditions,Maintenance
+HSE-000321,2024-06-19,FIELD-001,Equipment Damage,Medium,0,0,Contractor Activity,Operations
+HSE-000322,2024-06-20,FIELD-001,Injury,Low,0,0,Inadequate Maintenance,Maintenance
+HSE-000323,20-Jun-2024,FIELD-002,Near Miss,Low,0,0,Equipment Failure,Operations
+HSE-000324,2024-06-22,FIELD-002,First Aid,Low,0,0,Environmental Conditions,Maintenance
+HSE-000325,2024-06-29,FIELD-001,Environmental Release,Low,0,0,Contractor Activity,Facilities
+HSE-000326,2024-07-02,FIELD-002,Vehicle Incident,Low,0,0,Unknown,Logistics
+HSE-000327,2024/07/02,FIELD-003,Injury,Low,0,0,Procedure Not Followed,Logistics
+HSE-000328,2024-07-05,FIELD-003,First Aid, low,0,0,Human Error,Operations
+HSE-000329,2024-07-06,FIELD-003,Vehicle Incident,Medium,0,0,Equipment Failure,Logistics
+HSE-000330,2024-07-07,FIELD-004,Vehicle Incident,Medium,0,0,Contractor Activity,Logistics
+HSE-000331,2024-07-12,FIELD-004,Near Miss,Medium,0,0,Equipment Failure,Operations
+HSE-000332,2024-07-15,FIELD003,Environmental Release, medium,0,0,Human Error,Operations
+HSE-000333,16-Jul-2024,FIELD-003,Near Miss,Low,0,0,Human Error,Maintenance
+HSE-000334,2024-07-17,FIELD-004,Near Miss,High,0,0,Unknown,Operations
+HSE-000335,17-Jul-2024,FIELD-004,Equipment Damage,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000336,2024-07-17,FIELD-004,Equipment Damage,Medium,0,0,Procedure Not Followed,Maintenance
+HSE-000337,2024-07-19,FIELD-001,Equipment Damage,Low,0,0,Human Error,Maintenance
+HSE-000338,2024-07-21,FIELD-001,Process Safety Event,Low,0,0,Inadequate Maintenance,Facilities
+HSE-000339,2024-07-25,Field-002,Equipment Damage,Low,0,0,Unknown,Operations
+HSE-000340,2024-07-25,FIELD-002,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000341,2024/07/26,FIELD-002,Injury,Critical,1,2,Inadequate Maintenance,Logistics
+HSE-000342,2024-07-26,FIELD-003,Equipment Damage,Medium,0,0,Equipment Failure,Maintenance
+HSE-000343,2024-07-29,FIELD-002,Environmental Release,Medium,0,0,Unknown,Operations
+HSE-000344,2024-07-31,FIELD-001,Near Miss, low,0,0,Inadequate Maintenance,Maintenance
+HSE-000345,2024-08-04,FIELD-004,First Aid, low,0,0,Human Error,Maintenance
+HSE-000346,2024-08-06,FIELD-002,Equipment Damage,Medium,0,0,Equipment Failure,Operations
+HSE-000347,2024-08-07,FIELD-001,Environmental Release,Medium,0,0,Environmental Conditions,Facilities
+HSE-000348,08-Aug-2024,FIELD-003,First Aid,Medium,0,0,Environmental Conditions,Operations
+HSE-000349,2024-08-11,FIELD-001,Near Miss,Low,0,0,Procedure Not Followed,Maintenance
+HSE-000350,2024-08-24,FIELD-001,Environmental Release,Low,0,0,Equipment Failure,Facilities
+HSE-000351,2024-08-29,FIELD-003,Injury,High,0,0,Unknown,Logistics
+HSE-000352,2024-09-08,FIELD-004,Equipment Damage,Critical,0,0,Equipment Failure,Maintenance
+HSE-000353,2024-09-09,FIELD-001,First Aid,Medium,0,0,Human Error,Operations
+HSE-000354,2024-09-11,FIELD-002,Environmental Release,High,0,0,Human Error,Operations
+HSE-000355,2024-09-21,FIELD-003,Injury,Critical,1,4,Equipment Failure,Operations
+HSE-000356,2024-09-26,FIELD-002,First Aid,Low,0,0,Unknown,Maintenance
+HSE-000357,2024-09-27,FIELD-004,Near Miss,Medium,0,0,Equipment Failure,Facilities
+HSE-000358,2024-09-30,FIELD003,Near Miss,Low,0,0,Environmental Conditions,Operations
+HSE-000359,2024-10-02,Field-002,Near Miss,Low,0,0,Unknown,Facilities
+HSE-000360,2024-10-03,FIELD-002,Environmental Release,Medium,0,0,Procedure Not Followed,Operations
+HSE-000361,06-Oct-2024,FIELD-001,First Aid,Low,0,0,Human Error,Operations
+HSE-000362,2024-10-06,FIELD-002,First Aid,Medium,0,0,Inadequate Maintenance,Maintenance
+HSE-000363,2024-10-09,FIELD-001,First Aid,Low,0,0,Human Error,Operations
+HSE-000364,2024-10-10,FIELD-004,First Aid, low,0,0,Unknown,Operations
+HSE-000365,2024-10-17,FIELD-001,Injury,Medium,0,0,Equipment Failure,Operations
+HSE-000366,2024-10-19,FIELD-002,First Aid,Low,0,0,Human Error,Maintenance
+HSE-000367,20241022,FIELD-004,Process Safety Event,Medium,0,0,Equipment Failure,Facilities
+HSE-000368,2024-10-24,FIELD-001,Vehicle Incident,MEDIUM,0,0,Human Error,Logistics
+HSE-000369,2024-10-27,FIELD-001,First Aid,Low,0,0,Environmental Conditions,Maintenance
+HSE-000370,2024-10-30,FIELD-002,Equipment Damage,Medium,0,0,Environmental Conditions,Maintenance
+HSE-000371,2024-10-31,FIELD-001,Injury,Medium,1,8,Human Error,Logistics
+HSE-000372,2024-11-12,FIELD-002,Equipment Damage,Critical,0,0,Contractor Activity,Maintenance
+HSE-000373,2024-11-13,FIELD-002,Environmental Release,High,0,0,Equipment Failure,Facilities
+HSE-000374,2024-11-15,FIELD-004,Near Miss,Low,0,0,Human Error,Facilities
+HSE-000375,2024/11/20,FIELD-001,First Aid,Medium,0,0,Unknown,Operations
+HSE-000376,2024-11-24,FIELD-003,Environmental Release,Medium,0,0,Unknown,Operations
+HSE-000377,2024-11-25,FIELD-003,Equipment Damage,Medium,0,0,Environmental Conditions,Operations
+HSE-000378,2024-11-27,FIELD-003,First Aid,Low,0,0,Equipment Failure,Operations
+HSE-000379,2024-11-28,FIELD-004,Injury,High,1,5,Procedure Not Followed,Logistics
+HSE-000380,2024-11-29,FIELD-003,First Aid,LOW,0,0,Equipment Failure,Operations
+HSE-000381,2024-12-08,FIELD-002,Near Miss,Low,0,0,Unknown,Operations
+HSE-000382,2024-12-08,FIELD-002,Equipment Damage,High,0,0,Human Error,Operations
+HSE-000383,2024-12-15,FIELD-002,Equipment Damage,Medium,0,0,Human Error,Operations
+HSE-000384,2024-12-16,FIELD-002,Near Miss,Medium,0,0,Procedure Not Followed,Facilities
+HSE-000385,2024-12-19,FIELD-002,Equipment Damage,LOW,0,0,Equipment Failure,Maintenance
+HSE-000386,2024-12-19,FIELD-003,Environmental Release,Medium,0,0,Human Error,Facilities
+HSE-000387,2024-12-20,FIELD-002,Environmental Release,Critical,0,0,Equipment Failure,Facilities
+HSE-000388,2024-12-22,FIELD-004,Process Safety Event,Medium,0,0,Human Error,Operations
+HSE-000389,2024-12-23,FIELD-001,First Aid,Medium,0,0,Inadequate Maintenance,Operations
+HSE-000390,2024/12/24,FIELD-002,Vehicle Incident,Medium,0,0,Equipment Failure,Logistics
+HSE-000391,2024-12-25,FIELD-004,Near Miss,Low,0,0,Contractor Activity,Maintenance
+HSE-000392,2024-12-27,FIELD-001,First Aid,Medium,0,0,Procedure Not Followed,Maintenance
+HSE-000393,2024-12-27,Field-004,Near Miss,Medium,0,0,Equipment Failure,Operations
+HSE-000394,2024-12-30,FIELD-001,Injury,Medium,0,0,Human Error,Logistics
+HSE-000341,2024/07/26,FIELD-002,Injury,Critical,1,2,Inadequate Maintenance,Logistics
+HSE-000046,2022-04-23,FIELD-002,Injury,High,1,3,Human Error,Logistics
+HSE-000117,2022-11-23,FIELD-003,Near Miss,Low,0,0,Unknown,Operations

@@ -1,0 +1,5 @@
+field_id,field_name,region,basin,field_type,operator,commission_date,status
+FIELD-001,Synthetic Field Alpha,Synthetic Region N,Synthetic Basin 1,Onshore,PetroNexa Energy,2008-05-13,Producing
+FIELD-002,Synthetic Field Bravo,Synthetic Region S,Synthetic Basin 1,Offshore,PetroNexa Energy,2011-03-06,Producing
+FIELD-003,Synthetic Field Charlie,Synthetic Region E,Synthetic Basin 2,Onshore,PetroNexa Energy,2010-09-08,Producing
+FIELD-004,Synthetic Field Delta,Synthetic Region W,Synthetic Basin 2,Offshore,PetroNexa Energy,2009-10-20,Producing

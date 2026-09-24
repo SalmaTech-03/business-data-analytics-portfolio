@@ -1,0 +1,9 @@
+supplier_id,pos_received,on_time_pct,avg_quoted_lead_days,avg_actual_lead_days,avg_delay_days,po_value_usd,supplier_name,supplier_category,region,lead_time_days,supplier_rating,stockout_days_on_supplied_items
+SUP-001,229,61.135371179039296,16.75545851528384,19.21834061135371,2.462882096069869,1318980.6,Aurelia Industrial Supply,Mechanical Parts,Synthetic Region S,16,3.7,153
+SUP-002,248,92.33870967741935,12.35483870967742,12.076612903225806,-0.2782258064516129,1030150.1399999999,Borealis Machine Parts,Mechanical Parts,Synthetic Region E,13,3.0,66
+SUP-003,173,87.86127167630057,24.99421965317919,25.335260115606935,0.34104046242774566,2244631.07,Cobalt Valve & Fitting Co,Valves & Fittings,Synthetic Region S,24,3.7,67
+SUP-004,347,61.38328530259366,6.0,8.489913544668587,2.489913544668588,4600206.67,Delmar Lubricants & Chemicals,Lubricants & Chemicals,Synthetic Region E,6,3.4,803
+SUP-005,269,80.29739776951673,11.802973977695167,12.550185873605948,0.7472118959107806,701129.05,Everglen Filtration Systems,Filtration,Synthetic Region W,11,3.2,112
+SUP-006,225,73.33333333333333,20.773333333333333,22.191111111111113,1.4177777777777778,1146256.4,Fulcrum Electrical Works,Electrical,Synthetic Region S,21,4.3,64
+SUP-007,214,83.17757009345794,26.794392523364486,27.247663551401867,0.4532710280373832,1612725.85,Granite Pipe & Flange Ltd,Piping,Synthetic Region S,26,3.7,67
+SUP-008,228,58.77192982456141,7.745614035087719,10.68421052631579,2.93859649122807,2868479.16,Helix Chemical Trading,Lubricants & Chemicals,Synthetic Region S,8,4.0,543
